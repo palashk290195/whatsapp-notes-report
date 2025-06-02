@@ -187,9 +187,23 @@ class ChatProcessor:
         self.logger.info("Processing media files with OpenAI services...")
         
         processed_messages = []
+        media_count = 0
+        total_media = self.stats.media_messages
         
         for i, message in enumerate(messages):
             if message.media_filename:
+                media_count += 1
+                
+                # Emit progress update for current media file
+                progress = 50 + int((media_count / total_media) * 25)  # 50-75% range for media processing
+                status_message = f"Processing media {media_count}/{total_media}: {message.media_filename}"
+                
+                # Emit progress via logger if it has emit_progress method
+                if hasattr(self.logger, 'emit_progress'):
+                    self.logger.emit_progress(status_message, progress, "processing")
+                else:
+                    self.logger.info(status_message)
+                
                 # Find corresponding media file
                 media_file = self._find_media_file(message.media_filename)
                 
@@ -197,6 +211,9 @@ class ChatProcessor:
                     # Skip videos
                     if media_file.file_type == 'video':
                         self.logger.info(f"Skipping video: {media_file.filename}")
+                        if hasattr(self.logger, 'emit_progress'):
+                            self.logger.emit_progress(f"Skipped video: {media_file.filename}", progress, "success")
+                        
                         # Create message indicating video was skipped
                         enhanced_message = ParsedMessage(
                             timestamp=message.timestamp,
@@ -208,10 +225,24 @@ class ChatProcessor:
                         processed_messages.append(enhanced_message)
                         continue
                     
-                    self.logger.debug(f"Processing media {i+1}/{self.stats.media_messages}: {media_file.filename}")
+                    self.logger.debug(f"Processing media {media_count}/{total_media}: {media_file.filename}")
                     
                     # Process with AI
                     ai_result = self._process_media_file(media_file)
+                    
+                    # Emit result update
+                    if ai_result.success:
+                        result_message = f"✅ {media_file.filename}: {ai_result.service_used} ({ai_result.processing_time:.1f}s)"
+                        if hasattr(self.logger, 'emit_progress'):
+                            self.logger.emit_progress(result_message, progress, "success")
+                        else:
+                            self.logger.info(result_message)
+                    else:
+                        error_message = f"❌ {media_file.filename}: {ai_result.error}"
+                        if hasattr(self.logger, 'emit_progress'):
+                            self.logger.emit_progress(error_message, progress, "error")
+                        else:
+                            self.logger.warning(error_message)
                     
                     # Create enhanced message
                     enhanced_message = self._create_enhanced_message(message, ai_result)
@@ -226,7 +257,11 @@ class ChatProcessor:
                         self.stats.errors.append(f"Failed to process {media_file.filename}: {ai_result.error}")
                 else:
                     # Media file not found
-                    self.logger.warning(f"Media file not found: {message.media_filename}")
+                    error_message = f"Media file not found: {message.media_filename}"
+                    self.logger.warning(error_message)
+                    if hasattr(self.logger, 'emit_progress'):
+                        self.logger.emit_progress(error_message, progress, "error")
+                    
                     self.stats.failed_media += 1
                     self.stats.errors.append(f"Media file not found: {message.media_filename}")
                     processed_messages.append(message)  # Keep original message
@@ -234,7 +269,12 @@ class ChatProcessor:
                 # Text message - keep as is
                 processed_messages.append(message)
         
-        self.logger.info(f"Media processing complete: {self.stats.processed_media} successful, {self.stats.failed_media} failed")
+        # Final media processing update
+        final_message = f"Media processing complete: {self.stats.processed_media} successful, {self.stats.failed_media} failed"
+        if hasattr(self.logger, 'emit_progress'):
+            self.logger.emit_progress(final_message, 75, "success")
+        
+        self.logger.info(final_message)
         return processed_messages
     
     def _find_media_file(self, filename: str) -> Optional[MediaFile]:

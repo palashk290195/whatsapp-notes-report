@@ -205,7 +205,7 @@ class OpenAIAudioService:
             file_to_transcribe = media_file.filepath
             if media_file.extension.lower() not in self.whisper_supported_formats:
                 # Convert to MP3
-                self.logger.debug(f"Converting {media_file.extension} to MP3: {media_file.filename}")
+                self.logger.info(f"Converting {media_file.extension} to MP3: {media_file.filename}")
                 converted_file_path = self._convert_audio_to_mp3(media_file.filepath)
                 if not converted_file_path:
                     return OpenAIAudioResponse(
@@ -213,6 +213,7 @@ class OpenAIAudioService:
                         error=f"Failed to convert {media_file.extension} to MP3"
                     )
                 file_to_transcribe = converted_file_path
+                self.logger.info(f"Successfully converted {media_file.filename} to MP3, now transcribing...")
             
             # Process audio
             self.logger.debug(f"Transcribing audio with OpenAI Whisper: {media_file.filename}")
