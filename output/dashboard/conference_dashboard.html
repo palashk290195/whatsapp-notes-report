@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAU Vegas 2025</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; background: #f5f6fa; color: #2c3e50; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; text-align: center; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .stat-card { background: #ecf0f1; padding: 1rem; border-radius: 5px; text-align: center; }
+        .section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .section h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-bottom: 1rem; }
+        .card { border: 1px solid #ecf0f1; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .priority-1, .priority-2 { border-left: 5px solid #e74c3c; }
+        .priority-3, .priority-4 { border-left: 5px solid #f1c40f; }
+        .priority-5 { border-left: 5px solid #2ecc71; }
+        .evidence { background: #f8f9fa; padding: 0.8rem; border-radius: 5px; margin: 0.5rem 0; font-style: italic; }
+        .people, .companies { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+        .tag { background: #3498db; color: white; padding: 0.3rem 0.6rem; border-radius: 15px; font-size: 0.8rem; }
+        .action-item { display: flex; align-items: center; padding: 1rem; background: #ecf0f1; border-radius: 5px; margin-bottom: 0.5rem; }
+        .action-item input { margin-right: 1rem; }
+        .priority-high { background: #ffe5e5; }
+        .priority-medium { background: #fff8e1; }
+        .priority-low { background: #e8f5e8; }
+        .search-bar { margin-bottom: 2rem; }
+        .search-bar input { width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .btn { padding: 0.7rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; background: #3498db; color: white; margin: 0.5rem; }
+        .btn:hover { background: #2980b9; }
+        @media (max-width: 768px) { .stats { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line"></i> MAU Vegas 2025</h1>
+            <p>Conference Summary and Action Items</p>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3><i class="fas fa-comments"></i> Total Messages</h3>
+                    <p>147</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-users"></i> Attendees</h3>
+                    <p>12</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-lightbulb"></i> Key Topics</h3>
+                    <p>5</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-tasks"></i> Action Items</h3>
+                    <p>2</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Search content..." id="searchInput" onkeyup="searchContent()">
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-info-circle"></i> Conference Overview</h2>
+            <div class="card">
+                <h4>Key Topics Discussed:</h4>
+                <div class="people">
+                    <span class="tag">AI Apps Monetization</span> <span class="tag">Playable Ads</span> <span class="tag">User Acquisition</span> <span class="tag">AI Ad Networks</span> <span class="tag">Landing Page Optimization</span>
+                </div>
+                <h4 style="margin-top: 1rem;">Attendees:</h4>
+                <div class="people">
+                    <span class="tag">Rajat Piplewar</span> <span class="tag">Palash</span> <span class="tag">Divyakant</span> <span class="tag">Ashley Silva Howe</span> <span class="tag">Justin Warshavsky</span> <span class="tag">Sandy Shen</span> <span class="tag">Zach Gryphon</span> <span class="tag">Mark Menery</span> <span class="tag">Beth Berger</span> <span class="tag">Diana Gilbert</span> <span class="tag">Jasmine Ye</span> <span class="tag">Noa Gutterman</span>
+                </div>
+            </div>
+        </div>
+        
+        
+                <div class="section">
+                    <h2><i class="fas fa-graduation-cap"></i> 🎓 Key Learnings (1)</h2>
+                
+        <div class="card priority-1">
+            <h3>AI Apps Monetization</h3>
+            <p>Insights on monetizing AI applications and challenges faced.</p>
+        <div style='margin-top: 1rem;'>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                    <h4>📌 Opera is building an AI browser.</h4>
+                <div class="evidence">💬 "20/05/2025, 14:04 - Rajat Piplewar IITB Bangalore: Opera is building an AI browser."</div><p><i class="fas fa-clock"></i> 20/05/2025, 14:04</p><div class="people"><span class="tag"><i class="fas fa-user"></i> Rajat Piplewar</span></div><div class="companies"><span class="tag"><i class="fas fa-building"></i> Opera</span></div></div>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                    <h4>📌 SensorTower is exploring AI apps.</h4>
+                <div class="evidence">💬 "20/05/2025, 16:01 - Rajat Piplewar IITB Bangalore: Met a guy from sensortower who said they are looking into ai apps too"</div><p><i class="fas fa-clock"></i> 20/05/2025, 16:01</p><div class="people"><span class="tag"><i class="fas fa-user"></i> Rajat Piplewar</span></div><div class="companies"><span class="tag"><i class="fas fa-building"></i> SensorTower</span></div></div></div></div></div>
+                <div class="section">
+                    <h2><i class="fas fa-handshake"></i> 🤝 Follow-ups & Networking (1)</h2>
+                
+        <div class="card priority-2">
+            <h3>Networking and Follow-ups</h3>
+            <p>Key contacts and meetings planned for potential collaborations.</p>
+        <div style='margin-top: 1rem;'>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                    <h4>📌 Meeting with Divyakant from Clevertap.</h4>
+                <div class="evidence">💬 "20/05/2025, 18:07 - Rajat Piplewar IITB Bangalore: +1 (650) 382-9797 Divyakant from clevertap product. 12PM meeting tomorrow"</div><p><i class="fas fa-clock"></i> 20/05/2025, 18:07</p><div class="people"><span class="tag"><i class="fas fa-user"></i> Rajat Piplewar</span><span class="tag"><i class="fas fa-user"></i> Divyakant</span></div><div class="companies"><span class="tag"><i class="fas fa-building"></i> Clevertap</span></div></div>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                    <h4>📌 Discussion with Braze team about landing page and CRM.</h4>
+                <div class="evidence">💬 "20/05/2025, 20:46 - Rajat Piplewar IITB Bangalore: I talked to braze team too. About landing page + CRM thing."</div><p><i class="fas fa-clock"></i> 20/05/2025, 20:46</p><div class="people"><span class="tag"><i class="fas fa-user"></i> Rajat Piplewar</span></div><div class="companies"><span class="tag"><i class="fas fa-building"></i> Braze</span></div></div></div></div></div>
+                <div class="section">
+                    <h2><i class="fas fa-lightbulb"></i> 💡 Business Insights (2)</h2>
+                
+        <div class="card priority-3">
+            <h3>Business and Market Insights</h3>
+            <p>Trends and opportunities in the market.</p>
+        <div style='margin-top: 1rem;'>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                    <h4>📌 AI ad networks are being developed by Meta.</h4>
+                <div class="evidence">💬 "20/05/2025, 14:06 - Rajat Piplewar IITB Bangalore: Met a team from Meta who are building the AI ad network."</div><p><i class="fas fa-clock"></i> 20/05/2025, 14:06</p><div class="people"><span class="tag"><i class="fas fa-user"></i> Rajat Piplewar</span></div><div class="companies"><span class="tag"><i class="fas fa-building"></i> Meta</span></div></div></div></div>
+        <div class="card priority-4">
+            <h3>Technical Discussions</h3>
+            <p>Technical solutions and tools discussed during the conference.</p>
+        <div style='margin-top: 1rem;'>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                    <h4>📌 Braze's landing page builder capabilities.</h4>
+                <div class="evidence">💬 "20/05/2025, 20:46 - Rajat Piplewar IITB Bangalore: They said they have the support for creating landing pages using drag and drop natively."</div><p><i class="fas fa-clock"></i> 20/05/2025, 20:46</p><div class="people"><span class="tag"><i class="fas fa-user"></i> Rajat Piplewar</span></div><div class="companies"><span class="tag"><i class="fas fa-building"></i> Braze</span></div></div></div></div></div>
+                <div class="section">
+                    <h2><i class="fas fa-code"></i> 🔧 Technical Insights (1)</h2>
+                
+        <div class="card priority-4">
+            <h3>Technical Discussions</h3>
+            <p>Technical solutions and tools discussed during the conference.</p>
+        <div style='margin-top: 1rem;'>
+                <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                    <h4>📌 Braze's landing page builder capabilities.</h4>
+                <div class="evidence">💬 "20/05/2025, 20:46 - Rajat Piplewar IITB Bangalore: They said they have the support for creating landing pages using drag and drop natively."</div><p><i class="fas fa-clock"></i> 20/05/2025, 20:46</p><div class="people"><span class="tag"><i class="fas fa-user"></i> Rajat Piplewar</span></div><div class="companies"><span class="tag"><i class="fas fa-building"></i> Braze</span></div></div></div></div></div>
+        
+        
+        <div class="section">
+            <h2><i class="fas fa-images"></i> Media Highlights (2)</h2>
+        
+            <div class="card">
+                <h4>🖼️ Playable Ads Generation event advertisement.</h4>
+                <p><strong>Context:</strong> Discusses AI use in building interactive ads.</p>
+                <p><strong>Relevance:</strong> Highlights AI's role in ad creation.</p>
+                <p><i class="fas fa-clock"></i> 20/05/2025, 22:05</p>
+            </div>
+            
+            <div class="card">
+                <h4>🖼️ Presentation on Bid & Budget Optimization.</h4>
+                <p><strong>Context:</strong> Focus on precision and rationale in budgeting.</p>
+                <p><strong>Relevance:</strong> Important for understanding budget strategies.</p>
+                <p><i class="fas fa-clock"></i> 21/05/2025, 09:13</p>
+            </div>
+            </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-tasks"></i> Action Items (2)</h2>
+            
+            <div class="action-item priority-high">
+                <input type="checkbox" onchange="updateActionItem(this)">
+                <div>
+                    <h4>📋 Follow up with Divyakant from Clevertap.</h4>
+                    <p><i class="fas fa-user"></i> <strong>Contact:</strong> Rajat Piplewar</p>
+                    <p><i class="fas fa-exclamation-circle"></i> <strong>Priority:</strong> High</p>
+                    <p><i class="fas fa-calendar"></i> <strong>Deadline:</strong> 21/05/2025</p>
+                    <p><i class="fas fa-info-circle"></i> Potential collaboration on product development.</p>
+                </div>
+            </div>
+            
+            <div class="action-item priority-medium">
+                <input type="checkbox" onchange="updateActionItem(this)">
+                <div>
+                    <h4>📋 Explore building on top of Appsflyer MCP servers.</h4>
+                    <p><i class="fas fa-user"></i> <strong>Contact:</strong> Palash</p>
+                    <p><i class="fas fa-exclamation-circle"></i> <strong>Priority:</strong> Medium</p>
+                    <p><i class="fas fa-calendar"></i> <strong>Deadline:</strong> End of June 2025</p>
+                    <p><i class="fas fa-info-circle"></i> Opportunity to enhance technical capabilities.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-download"></i> Export Options</h2>
+            <button class="btn" onclick="window.print()"><i class="fas fa-print"></i> Print Dashboard</button>
+            <button class="btn" onclick="copyToClipboard()"><i class="fas fa-copy"></i> Copy Content</button>
+        </div>
+    </div>
+    
+    <script>
+        function searchContent() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                section.style.display = text.includes(filter) ? 'block' : 'none';
+            });
+        }
+        
+        function copyToClipboard() {
+            const content = document.body.innerText;
+            navigator.clipboard.writeText(content).then(() => {
+                alert('Content copied to clipboard!');
+            });
+        }
+        
+        function updateActionItem(checkbox) {
+            const item = checkbox.parentElement;
+            if (checkbox.checked) {
+                item.style.opacity = '0.6';
+                item.style.textDecoration = 'line-through';
+            } else {
+                item.style.opacity = '1';
+                item.style.textDecoration = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

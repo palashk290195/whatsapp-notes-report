@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The image shows a presentation screen with a bright blue background overlaid with a grid. The text \"Insights driven video gen-Al\" is at the top of the screen. Two digitally created images are side-by-side. The left image depicts a tank wearing a wizard hat in a forest setting. The right image shows a small, quaint house with lit windows in a whimsical forest scene with glowing stars hanging in the sky. Below the left image is the text \"Best Performing Static\" and below the right image is \"+ Performance based prompt to Gemini VEO 2\". The screen appears to be part of a larger presentation, possibly on the topic of AI and video generation. A decorative wall panel is partially visible on the right side of the image.",
+  "service_used": "gemini",
+  "processing_time": 6.071856737136841,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 6.071591138839722
+  },
+  "cached_at": 1748833629.386701
+}

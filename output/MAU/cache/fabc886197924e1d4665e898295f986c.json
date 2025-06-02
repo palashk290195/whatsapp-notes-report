@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The image is a screenshot of an event advertisement on a mobile device. The event appears to be a marketing or tech conference, specifically focusing on playable ads generation. The first block encourages people to meet at the Lion at the MGM lobby, go to the iconic Las Vegas sign, take a cool picture and run back to MGM, and then a button asking them to \"RSVP NOW\". The next block details a \"Playable Ads Generation 1:1 Live Demo,\" scheduled from 9:00 AM to 4:00 PM (local time: 6:00 AM - 1:00 PM). It highlights the use of AI to build interactive, performance-ready playable ads, featuring the ability to choose vertical or horizontal formats, plug in gameplay footage without design needed, generate interaction scenes in just a few clicks, and launch-ready creative in under 10 minutes. It includes a \"BOOK YOUR DEMO\" button, and notes it is sponsored by Appier. At the bottom, another event is listed from 12:00 PM - 1:00 PM that asks to \"Ask a question about MAU\" at Meeting Room 256. Finally, the top and bottom of the image show the standard mobile device interface elements.",
+  "service_used": "gemini",
+  "processing_time": 2.9236810207366943,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 2.923264980316162
+  },
+  "cached_at": 1748833570.4368808
+}

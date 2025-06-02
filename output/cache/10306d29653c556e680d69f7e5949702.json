@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image portrays an indoor setting that resembles an event space or a small venue for a gathering. The primary focus is on a DJ who is positioned behind a black table adorned with equipment and lighting setups. He appears engaged with the music, possibly mixing or checking the sound.\n\nSurrounding the DJ are several empty chairs with white, ornate frames and black cushions, indicating that guests might be expected to arrive soon. The floor is carpeted, and the overall lighting suggests a warm, inviting ambiance, with soft orange lights illuminating the walls and some decorations.\n\nThe backdrop consists of large windows that provide a view of the outside, where city lights twinkle in the dark. The ceiling features a fan, and there are hanging decorative lights, adding to the festive atmosphere. Some projection equipment is present, hinting that visuals might accompany the music.\n\nThe entire scene conveys a sense of anticipation and excitement for an event, likely a party or celebration, where the DJ will play a central role in entertaining the guests.",
+  "service_used": "openai_vision",
+  "processing_time": 5.79125714302063,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748835768.040952
+}

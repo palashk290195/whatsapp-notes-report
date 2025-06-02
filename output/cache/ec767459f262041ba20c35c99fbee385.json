@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image shows a presentation slide titled \"D60 Revenue per Install, By Framework.\" The slide features a bar graph comparing revenue per install across different frameworks: Native, Flutter, React-Native, and Other. The React-Native column is highlighted. Each bar has two segments. The lower segments are significantly smaller than the upper segments. Numerical values are displayed above the segments of each bar. The RevenueCat logo is in the lower right corner. The backdrop includes blue curtains and decorative wall panels illuminated with blue light. The audience is visible in the lower part of the image.",
+  "service_used": "gemini",
+  "processing_time": 2.7335331439971924,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842401.2159638
+}

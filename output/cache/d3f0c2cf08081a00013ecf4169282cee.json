@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image features a presentation slide displayed on a large screen during an event, likely a conference or seminar. The slide presents a bar graph titled \"D60 Revenue per Install, By Framework.\" \n\n### Main Subjects:\n- **Graph Components**: The graph depicts various frameworks (Native, Flutter, React-Native, and Other) along the horizontal axis, with the corresponding revenue per install values along the vertical axis. Each framework has a bar illustrating its revenue performance.\n- **Bar Heights**: The heights of the bars vary significantly, with React-Native showing the highest revenue per install at $3.54, followed by Other at $0.96, while Native and Flutter show lower figures. The values indicate notable differences in revenue generation capabilities across the frameworks.\n\n### Setting:\n- **Background**: The presentation is set against a backdrop of dark curtains, possibly in a conference hall, with ambient lighting contributing to a professional atmosphere. The stage is illuminated, enhancing the focus on the slide.\n- **Audience and Context**: While the audience is partially visible at the bottom of the image, they appear engaged with the presentation, indicating that the setting is interactive. \n\n### Notable Features:\n- **Design Elements**: The slide is designed for clarity, with bold text for the title and concise labels for the bars. The RevenueCat logo is prominently displayed at the bottom right.\n- **Focus on Data**: The highlighted box around React-Native emphasizes its standout revenue figure, drawing attention to",
+  "service_used": "openai_vision",
+  "processing_time": 7.536893129348755,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748846335.59829
+}

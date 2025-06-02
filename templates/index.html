@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Notes Processor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .left-panel {
+            width: 40%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .right-panel {
+            width: 60%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .api-keys-section {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 2px solid rgba(52, 152, 219, 0.1);
+        }
+
+        .api-keys-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .api-key-group {
+            margin-bottom: 1rem;
+        }
+
+        .api-key-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .api-key-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease;
+            font-family: Monaco, 'Courier New', monospace;
+        }
+
+        .api-key-group input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .api-key-group input::placeholder {
+            color: #bdc3c7;
+            font-style: italic;
+        }
+
+        .upload-area {
+            border: 3px dashed #3498db;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: rgba(52, 152, 219, 0.05);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: #2980b9;
+            background: rgba(52, 152, 219, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .upload-area.dragover {
+            border-color: #27ae60;
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .upload-text {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-subtext {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .conference-input {
+            margin-bottom: 2rem;
+        }
+
+        .conference-input label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .conference-input input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .conference-input input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .progress-container {
+            display: none;
+            margin-bottom: 2rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .status-log {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1rem;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            border: 1px solid #e9ecef;
+        }
+
+        .status-item {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+            background: white;
+        }
+
+        .status-item.processing {
+            border-left-color: #f39c12;
+            background: #fef9e7;
+        }
+
+        .status-item.success {
+            border-left-color: #27ae60;
+            background: #eafaf1;
+        }
+
+        .status-item.error {
+            border-left-color: #e74c3c;
+            background: #fdedec;
+        }
+
+        .timestamp {
+            color: #6c757d;
+            font-size: 0.7rem;
+        }
+
+        .upload-btn {
+            display: none;
+        }
+
+        .results-section {
+            display: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            flex: 1;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .download-btn.secondary {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+        }
+
+        .markdown-editor {
+            flex: 1;
+            background: white;
+            border-radius: 15px;
+            border: 2px solid #ecf0f1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .editor-header {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+        }
+
+        .editor-header h3 {
+            color: #2c3e50;
+            margin: 0;
+            flex: 1;
+        }
+
+        .editor-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .editor-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .editor-btn.preview {
+            background: #3498db;
+            color: white;
+        }
+
+        .editor-btn.edit {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .editor-btn.pdf {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .editor-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .markdown-textarea {
+            flex: 1;
+            border: none;
+            padding: 2rem;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            resize: none;
+            outline: none;
+        }
+
+        .markdown-preview {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            line-height: 1.6;
+        }
+
+        .markdown-preview h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-preview h2 {
+            color: #34495e;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
+        }
+
+        .markdown-preview h3 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .markdown-preview ul, .markdown-preview ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .markdown-preview blockquote {
+            border-left: 4px solid #bdc3c7;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background: #f8f9fa;
+            padding: 1rem 1rem 1rem 2rem;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .markdown-preview strong {
+            color: #2c3e50;
+        }
+
+        .markdown-preview code {
+            background: #f1f2f6;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message, .success-message {
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .error-message {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .success-message {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .placeholder-content {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #7f8c8d;
+        }
+
+        .placeholder-content i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .left-panel, .right-panel {
+                width: 100%;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+            }
+        }
+
+        .api-status {
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        .api-status.valid {
+            color: #27ae60;
+        }
+
+        .api-status.invalid {
+            color: #e74c3c;
+        }
+
+        .api-status.empty {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel: Upload & Progress -->
+        <div class="left-panel">
+            <div class="header">
+                <h1><i class="fas fa-comments"></i> WhatsApp Chat Notes</h1>
+                <p>Transform your chat exports into editable business reports</p>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+
+            <!-- Upload Section -->
+            <div id="uploadSection">
+                <!-- API Keys Section -->
+                <div class="api-keys-section">
+                    <h3><i class="fas fa-key"></i> OpenAI API Key <small>(Optional - uses .env if not provided)</small></h3>
+                    
+                    <div class="api-key-group">
+                        <label for="openaiKey"><i class="fab fa-openai"></i> OpenAI API Key</label>
+                        <input type="password" id="openaiKey" placeholder="sk-..." autocomplete="off">
+                        <div class="api-status empty" id="openaiStatus">Will use .env OPENAI_API_KEY if not provided</div>
+                        <small style="color: #7f8c8d; font-size: 0.8rem; margin-top: 0.5rem; display: block;">
+                            <i class="fas fa-info-circle"></i> Used for: Image Vision, Audio Transcription, and Report Generation
+                        </small>
+                    </div>
+                </div>
+
+                <div class="conference-input">
+                    <label for="conferenceName"><i class="fas fa-calendar-alt"></i> Conference Name</label>
+                    <input type="text" id="conferenceName" placeholder="e.g., MAU Vegas 2025" value="Conference">
+                </div>
+
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">Drag & drop your WhatsApp export ZIP file here</div>
+                    <div class="upload-subtext">or click to browse files (up to 1GB)</div>
+                    <input type="file" id="fileInput" accept=".zip" class="upload-btn">
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Initializing...</div>
+                
+                <div class="status-log" id="statusLog">
+                    <div class="status-item">
+                        <span class="timestamp">Ready</span><br>
+                        Waiting for file upload...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <div class="stats-grid" id="statsGrid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="statMessages">-</div>
+                        <div class="stat-label">Messages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="statMedia">-</div>
+                        <div class="stat-label">Media Files</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="statCost">-</div>
+                        <div class="stat-label">Cost</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="statTime">-</div>
+                        <div class="stat-label">Time (min)</div>
+                    </div>
+                </div>
+
+                <div class="download-buttons" id="downloadButtons">
+                    <a href="#" class="download-btn" id="downloadEnhanced">
+                        <i class="fas fa-file-text"></i> Enhanced Chat
+                    </a>
+                    <a href="#" class="download-btn" id="downloadAnalysis">
+                        <i class="fas fa-chart-bar"></i> Analysis Data
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Editable Markdown Report -->
+        <div class="right-panel">
+            <div class="markdown-editor" id="markdownEditor">
+                <div class="editor-header">
+                    <h3><i class="fas fa-edit"></i> Conference Report</h3>
+                    <div class="editor-controls">
+                        <button class="editor-btn edit" id="editBtn" onclick="switchToEdit()">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="editor-btn preview" id="previewBtn" onclick="switchToPreview()">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                        <button class="editor-btn pdf" id="pdfBtn" onclick="downloadPDF()" style="display: none;">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="placeholder-content" id="placeholderContent">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>Your Editable Report Will Appear Here</h2>
+                    <p>Upload a WhatsApp chat export to generate a comprehensive, editable conference report. You'll be able to edit the markdown and download as PDF.</p>
+                </div>
+                
+                <textarea class="markdown-textarea" id="markdownTextarea" style="display: none;" placeholder="Your markdown content will appear here for editing..."></textarea>
+                
+                <div class="markdown-preview" id="markdownPreview" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // WebSocket connection
+        const socket = io();
+        let currentSessionId = null;
+        let currentMarkdownContent = '';
+        let isPreviewMode = true;
+
+        // DOM elements
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const uploadSection = document.getElementById('uploadSection');
+        const progressContainer = document.getElementById('progressContainer');
+        const resultsSection = document.getElementById('resultsSection');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const statusLog = document.getElementById('statusLog');
+        const conferenceName = document.getElementById('conferenceName');
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+        
+        // API key elements
+        const openaiKey = document.getElementById('openaiKey');
+        
+        // Editor elements
+        const placeholderContent = document.getElementById('placeholderContent');
+        const markdownTextarea = document.getElementById('markdownTextarea');
+        const markdownPreview = document.getElementById('markdownPreview');
+        const editBtn = document.getElementById('editBtn');
+        const previewBtn = document.getElementById('previewBtn');
+        const pdfBtn = document.getElementById('pdfBtn');
+
+        // Upload area event listeners
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('dragleave', handleDragLeave);
+        uploadArea.addEventListener('drop', handleDrop);
+        fileInput.addEventListener('change', handleFileSelect);
+
+        // API key validation
+        openaiKey.addEventListener('input', validateApiKey);
+
+        // Markdown editor events
+        markdownTextarea.addEventListener('input', () => {
+            currentMarkdownContent = markdownTextarea.value;
+        });
+
+        // WebSocket event listeners
+        socket.on('connect', () => {
+            console.log('Connected to server');
+        });
+
+        socket.on('progress_update', (data) => {
+            updateProgress(data.progress, data.message);
+            addStatusLog(data.message, data.timestamp, data.status);
+        });
+
+        socket.on('processing_complete', (data) => {
+            handleProcessingComplete(data);
+        });
+
+        socket.on('processing_error', (data) => {
+            handleProcessingError(data.error);
+        });
+
+        function validateApiKey(event) {
+            const input = event.target;
+            const statusElement = document.getElementById(input.id + 'Status');
+            const value = input.value.trim();
+            
+            if (!value) {
+                statusElement.textContent = `Will use .env ${input.id.toUpperCase().replace('KEY', '')}_API_KEY if not provided`;
+                statusElement.className = 'api-status empty';
+            } else if (value.length < 10) {
+                statusElement.textContent = 'Invalid API key format';
+                statusElement.className = 'api-status invalid';
+            } else {
+                statusElement.textContent = 'API key provided ✓';
+                statusElement.className = 'api-status valid';
+            }
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        }
+
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            if (!file.name.toLowerCase().endsWith('.zip')) {
+                showError('Please select a ZIP file containing your WhatsApp export.');
+                return;
+            }
+
+            if (file.size > 1024 * 1024 * 1024) { // 1GB
+                showError('File size too large. Please ensure your ZIP file is under 1GB.');
+                return;
+            }
+
+            uploadFile(file);
+        }
+
+        function uploadFile(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('conference_name', conferenceName.value);
+            
+            // Add API keys if provided
+            if (openaiKey.value.trim()) {
+                formData.append('openai_key', openaiKey.value.trim());
+            }
+
+            // Show progress
+            uploadSection.style.display = 'none';
+            progressContainer.style.display = 'block';
+            updateProgress(0, 'Uploading file...');
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    currentSessionId = data.session_id;
+                    socket.emit('join_session', { session_id: currentSessionId });
+                    showSuccess('Upload successful! Processing started...');
+                } else {
+                    throw new Error(data.error || 'Upload failed');
+                }
+            })
+            .catch(error => {
+                console.error('Upload error:', error);
+                showError(error.message);
+                resetToUpload();
+            });
+        }
+
+        function updateProgress(percentage, message) {
+            progressFill.style.width = percentage + '%';
+            progressText.textContent = `${percentage}% - ${message}`;
+        }
+
+        function addStatusLog(message, timestamp, status = 'info') {
+            const statusItem = document.createElement('div');
+            statusItem.className = `status-item ${status}`;
+            statusItem.innerHTML = `
+                <span class="timestamp">${new Date(timestamp).toLocaleTimeString()}</span><br>
+                ${message}
+            `;
+            statusLog.appendChild(statusItem);
+            statusLog.scrollTop = statusLog.scrollHeight;
+        }
+
+        function handleProcessingComplete(data) {
+            // Update stats
+            document.getElementById('statMessages').textContent = data.stats.total_messages;
+            document.getElementById('statMedia').textContent = data.stats.processed_media;
+            document.getElementById('statCost').textContent = data.stats.estimated_cost;
+            document.getElementById('statTime').textContent = Math.round(data.processing_time / 60 * 10) / 10;
+
+            // Setup download links
+            document.getElementById('downloadEnhanced').href = data.download_links.enhanced;
+            document.getElementById('downloadAnalysis').href = data.download_links.analysis;
+
+            // Show results
+            resultsSection.style.display = 'block';
+            
+            // Load markdown content into editor
+            currentMarkdownContent = data.markdown_content;
+            markdownTextarea.value = currentMarkdownContent;
+            
+            // Show editor and hide placeholder
+            placeholderContent.style.display = 'none';
+            markdownTextarea.style.display = 'block';
+            pdfBtn.style.display = 'inline-block';
+            
+            // Start in preview mode
+            switchToPreview();
+
+            showSuccess('Processing completed successfully! Your editable report is ready.');
+        }
+
+        function handleProcessingError(error) {
+            showError(`Processing failed: ${error}`);
+            resetToUpload();
+        }
+
+        function switchToEdit() {
+            isPreviewMode = false;
+            markdownTextarea.style.display = 'block';
+            markdownPreview.style.display = 'none';
+            editBtn.style.background = '#2ecc71';
+            previewBtn.style.background = '#95a5a6';
+            markdownTextarea.focus();
+        }
+
+        function switchToPreview() {
+            isPreviewMode = true;
+            markdownTextarea.style.display = 'none';
+            markdownPreview.style.display = 'block';
+            editBtn.style.background = '#95a5a6';
+            previewBtn.style.background = '#3498db';
+            
+            // Update preview with current content
+            const renderedMarkdown = marked.parse(currentMarkdownContent || markdownTextarea.value);
+            markdownPreview.innerHTML = renderedMarkdown;
+        }
+
+        function downloadPDF() {
+            if (!currentMarkdownContent && !markdownTextarea.value) {
+                showError('No content to convert to PDF');
+                return;
+            }
+
+            const content = currentMarkdownContent || markdownTextarea.value;
+            
+            // Show loading state
+            const originalText = pdfBtn.innerHTML;
+            pdfBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating PDF...';
+            pdfBtn.disabled = true;
+
+            fetch('/convert-to-pdf', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    markdown_content: content,
+                    conference_name: conferenceName.value,
+                    session_id: currentSessionId
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.blob();
+                }
+                throw new Error('PDF generation failed');
+            })
+            .then(blob => {
+                // Create download link
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${conferenceName.value.replace(/\s+/g, '_')}_report.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+                
+                showSuccess('PDF downloaded successfully!');
+            })
+            .catch(error => {
+                console.error('PDF download error:', error);
+                showError('Failed to generate PDF. Please try again.');
+            })
+            .finally(() => {
+                // Restore button state
+                pdfBtn.innerHTML = originalText;
+                pdfBtn.disabled = false;
+            });
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+            setTimeout(() => {
+                errorMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        function showSuccess(message) {
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        }
+
+        function resetToUpload() {
+            uploadSection.style.display = 'block';
+            progressContainer.style.display = 'none';
+            resultsSection.style.display = 'none';
+            fileInput.value = '';
+            
+            // Reset editor
+            placeholderContent.style.display = 'block';
+            markdownTextarea.style.display = 'none';
+            markdownPreview.style.display = 'none';
+            pdfBtn.style.display = 'none';
+            currentMarkdownContent = '';
+        }
+
+        // Auto-resize for mobile
+        function handleResize() {
+            if (window.innerWidth <= 768) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.remove('mobile');
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    </script>
+</body>
+</html> 

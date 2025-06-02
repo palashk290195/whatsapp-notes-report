@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "Here is a concise description of the image:\n\nThe image shows a presentation slide with a bar graph titled \"Monetization Mix, By Category.\" The graph compares monetization strategies across various app categories (Business, Education, Gaming, etc.) and \"Overall,\" showing the percentage breakdown of different subscription models, from \"Subscriptions Only\" to \"Subscriptions, Consumables, and Lifetime.\" The \"Overall\" category is highlighted with a dark blue box and is labeled as 35%. The slide is branded with the \"RevenueCat\" logo at the bottom right. The background of the slide shows part of a stage setup, including geometric patterns and blue curtains.",
+  "service_used": "gemini",
+  "processing_time": 5.957555055618286,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 5.957251071929932
+  },
+  "cached_at": 1748833692.646192
+}

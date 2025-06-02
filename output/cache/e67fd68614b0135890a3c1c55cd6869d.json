@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image captures a presentation slide titled \"Media mix recommendation Agent\" displayed on a large screen at a conference or event. The slide outlines a workflow process involving AI-powered recommendation and implementation agents.\n\nThe process begins with data from various social media platforms (TikTok, Meta, Google), which are then processed through \"Attribution and performance analysis.\" This is followed by an AI \"Recommendation engine\" that considers historical performance analysis, industry and geo benchmarks, and network performance trends. The engine generates bidding adjustments, creative changes, and channel prioritization, which are then implemented by another AI \"Implementation agent,\" ultimately feeding back into the same social media platforms.\n\nThe screen is set against a backdrop featuring a textured wall design. A podium with \"MAU VEGAS\" is visible on the right side. The presentation is bathed in blue light.",
+  "service_used": "gemini",
+  "processing_time": 51.451495885849,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842274.3108668
+}

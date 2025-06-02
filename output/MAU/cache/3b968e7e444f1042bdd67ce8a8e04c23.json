@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The image captures a presentation at a conference or seminar, bathed in blue and purple lighting. The main subject is a large screen displaying a slide titled \"User Journey Automation,\" featuring a diagram with the concepts \"Precision,\" \"Rationale,\" and \"Ambiguity\" at the vertices of a shape enclosed in a circle. In the foreground, a man is crouched down working or adjusting equipment in front of the stage. The room appears to be a conference hall or ballroom, with decorative panels along the walls, and a patterned carpet. A partially visible audience member sits in the lower left corner.",
+  "service_used": "gemini",
+  "processing_time": 17.696813821792603,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 17.695700883865356
+  },
+  "cached_at": 1748833599.1025212
+}

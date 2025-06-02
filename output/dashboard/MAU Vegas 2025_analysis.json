@@ -1,0 +1,194 @@
+{
+  "conference_overview": {
+    "name": "MAU Vegas 2025",
+    "total_messages": 147,
+    "key_topics": [
+      "AI Apps Monetization",
+      "Playable Ads",
+      "User Acquisition",
+      "AI Ad Networks",
+      "Landing Page Optimization"
+    ],
+    "attendees": [
+      "Rajat Piplewar",
+      "Palash",
+      "Divyakant",
+      "Ashley Silva Howe"
+    ]
+  },
+  "sections": [
+    {
+      "id": "learnings_001",
+      "title": "AI Apps Monetization",
+      "type": "learnings",
+      "priority": 1,
+      "description": "Insights on the growth and challenges of AI applications in monetization.",
+      "content": {
+        "key_points": [
+          {
+            "point": "AI apps face challenges with brand teams not wanting generative output.",
+            "evidence": "Met a team from Meta who are building the AI ad network. They have been working with DSPs to get advertisers spend but ran into issues with brand teams not wanting generative output.",
+            "timestamp": "20/05/2025, 14:06",
+            "people": [
+              "Rajat Piplewar"
+            ],
+            "companies": [
+              "Meta"
+            ]
+          },
+          {
+            "point": "SensorTower is exploring AI apps.",
+            "evidence": "Met a guy from sensortower who said they are looking into ai apps too.",
+            "timestamp": "20/05/2025, 16:01",
+            "people": [
+              "Rajat Piplewar"
+            ],
+            "companies": [
+              "SensorTower"
+            ]
+          }
+        ],
+        "subcategories": {
+          "challenges": [
+            "Brand team resistance"
+          ],
+          "opportunities": [
+            "AI app exploration by SensorTower"
+          ]
+        }
+      }
+    },
+    {
+      "id": "followups_001",
+      "title": "Networking and Follow-ups",
+      "type": "followups",
+      "priority": 2,
+      "description": "Key contacts and meetings planned for potential collaborations.",
+      "content": {
+        "key_points": [
+          {
+            "point": "Meeting with Divyakant from Clevertap.",
+            "evidence": "+1 (650) 382-9797 Divyakant from clevertap product. 12PM meeting tomorrow.",
+            "timestamp": "20/05/2025, 18:07",
+            "people": [
+              "Rajat Piplewar",
+              "Divyakant"
+            ],
+            "companies": [
+              "Clevertap"
+            ]
+          },
+          {
+            "point": "Discussion with Braze team about landing page and CRM.",
+            "evidence": "I talked to braze team too. About landing page + CRM thing.",
+            "timestamp": "20/05/2025, 20:46",
+            "people": [
+              "Rajat Piplewar"
+            ],
+            "companies": [
+              "Braze"
+            ]
+          }
+        ],
+        "subcategories": {
+          "contacts": [
+            "Divyakant"
+          ],
+          "meetings": [
+            "Clevertap product meeting"
+          ]
+        }
+      }
+    },
+    {
+      "id": "insights_001",
+      "title": "Business and Market Insights",
+      "type": "insights",
+      "priority": 3,
+      "description": "Emerging trends and market opportunities identified during the conference.",
+      "content": {
+        "key_points": [
+          {
+            "point": "Playable ads are gaining traction with AI.",
+            "evidence": "Playable Ads Generation 1:1 Live Demo, scheduled from 9:00 AM to 4:00 PM, highlights the use of AI to build interactive, performance-ready playable ads.",
+            "timestamp": "20/05/2025, 22:05",
+            "people": [
+              "Palash"
+            ],
+            "companies": [
+              "Appier"
+            ]
+          }
+        ],
+        "subcategories": {
+          "trends": [
+            "AI in playable ads"
+          ],
+          "opportunities": [
+            "Interactive ad formats"
+          ]
+        }
+      }
+    },
+    {
+      "id": "technical_001",
+      "title": "Technical Discussions",
+      "type": "insights",
+      "priority": 4,
+      "description": "Technical solutions and platforms discussed during the conference.",
+      "content": {
+        "key_points": [
+          {
+            "point": "Braze's landing page builder and CRM integration.",
+            "evidence": "Braze team said they have the support for creating landing pages using drag and drop natively.",
+            "timestamp": "20/05/2025, 20:46",
+            "people": [
+              "Rajat Piplewar"
+            ],
+            "companies": [
+              "Braze"
+            ]
+          }
+        ],
+        "subcategories": {
+          "tools": [
+            "Braze landing page builder"
+          ],
+          "platforms": [
+            "CRM integration"
+          ]
+        }
+      }
+    }
+  ],
+  "media_references": [
+    {
+      "description": "Event advertisement screenshot focusing on playable ads generation.",
+      "context": "Encourages people to meet at the Lion at the MGM lobby and attend a live demo.",
+      "timestamp": "20/05/2025, 22:05",
+      "relevance": "Highlights the use of AI in creating interactive ads."
+    },
+    {
+      "description": "Presentation slide on 'Bid & Budget Optimization'.",
+      "context": "Features a visual diagram with 'Precision', 'Rationale', and 'Ambiguity'.",
+      "timestamp": "21/05/2025, 09:13",
+      "relevance": "Provides insights into budget optimization strategies."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Follow up with Divyakant from Clevertap.",
+      "person": "Rajat Piplewar",
+      "priority": "high",
+      "deadline": "21/05/2025",
+      "context": "Scheduled meeting to discuss product collaboration."
+    },
+    {
+      "task": "Explore building a landing page solution on top of Braze's MCP servers.",
+      "person": "Rajat Piplewar",
+      "priority": "medium",
+      "deadline": "End of June 2025",
+      "context": "Identified gap in current landing page solutions."
+    }
+  ]
+}

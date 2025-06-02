@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The image displays a presentation slide with a flowchart-like diagram that appears to describe an attribution and recommendation system. The main focus seems to be on how data flows from various sources, including Android and iOS platforms, through an \"Attribution engine\" to a \"Single Source of Truth.\"\n\nSeveral processes are labeled as being \"AI powered,\" including \"AI Blocking,\" \"Fraud proactive insights,\" \"Modelled Post Install Events,\" \"Adaptive attribution settings,\" \"Modelled Attribution,\" \"AI Recommendations,\" \"Null Modelling,\" and \"AI split between test to control.\" These elements are interconnected with arrows, showing the flow of data and decision-making within the system.\n\nSpecific components of the system include \"Protect360,\" \"Modeling,\" \"Android,\" \"iOS,\" \"Advanced SRN,\" \"IDFA,\" \"Probabilistic,\" \"ASA,\" \"SKAN,\" \"AdServices framework,\" \"Conversion Studio,\" \"Sandbox Studio,\" \"Partner integrations,\" \"Aggregation Service,\" \"Sandbox,\" and \"Incrementality.\"\n\nThe background is a gradient blue color, and the slide is being presented in a venue with dark patterned walls visible on the right side.",
+  "service_used": "gemini",
+  "processing_time": 5.6405439376831055,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 5.6400439739227295
+  },
+  "cached_at": 1748833613.931094
+}

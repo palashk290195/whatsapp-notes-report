@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image portrays a presentation setting, likely at a conference or seminar. The focal point is a large screen displaying a diagram labeled \"Influencer Strategy.\" The diagram is a triangular shape with three points labeled \"Precision,\" \"Rationale,\" and \"Ambiguity,\" suggesting a conceptual approach to influencer marketing or strategy.\n\nThe backdrop features elegant draping in shades of purple, contributing to a professional atmosphere. In the foreground, seated attendees can be seen, with one individual clearly visible on the left, holding a cup. They are dressed in business attire, indicating a formal context. To the right, a person appears to be setting up or adjusting equipment, possibly a sound or camera operator.\n\nThe room is well-lit, and the combination of purple lighting and the structured layout of the space creates a sophisticated environment conducive to learning and engagement. The overall scene suggests a focus on sharing insights and strategies related to influencer marketing.",
+  "service_used": "openai_vision",
+  "processing_time": 4.941900968551636,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842187.12254
+}

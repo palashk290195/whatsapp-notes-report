@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "description": "",
+  "service_used": "gemini",
+  "processing_time": 0.00020599365234375,
+  "error": "Files API call failed: module 'google.generativeai' has no attribute 'upload_file'",
+  "metadata": {
+    "tokens_used": null,
+    "processing_time": 2.8848648071289062e-05
+  },
+  "cached_at": 1748833299.405198
+}

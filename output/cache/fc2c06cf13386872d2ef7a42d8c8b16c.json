@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image features a presentation slide displayed on a screen. The background is a deep blue with grid lines that create a geometric design. At the center of the slide is a diamond-shaped graphic, which is outlined in a lighter blue hue. \n\nSurrounding the diamond are four labels identifying key areas of focus:\n\n1. **Business Intelligence** - positioned at the top left.\n2. **Market & Customer Research** - located at the top right.\n3. **Product Design & Development** - situated at the bottom right.\n4. **Brand & Creative Leadership** - found at the bottom left.\n5. **AI Adoption Leadership** - positioned at the center bottom within the diamond shape.\n\nThe text accompanying each label is written in a clear, white font, making it easily readable against the blue background. The overall design suggests a focus on strategic business areas likely related to technology and leadership. The setting appears to be a conference or business presentation, as indicated by the formal presentation style. The lighting and fabric draping seen along the top of the image suggest an elevated setting conducive to professional discussions.",
+  "service_used": "openai_vision",
+  "processing_time": 4.757395029067993,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842196.067679
+}

@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The image shows a group of six people gathered in a circle in what appears to be a conference or meeting room. One person is standing and gesturing while addressing the others, who are seated and facing him. A laptop is set up on a small table beside the speaker, displaying text that reads \"Measuring up on AEG Sales\". In the background, a bar-like setup with beverage dispensers is visible, and the \"MGM GRAND\" logo is displayed on the front. The setting includes plain white walls and a carpeted floor.",
+  "service_used": "gemini",
+  "processing_time": 2.140383005142212,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 2.138984203338623
+  },
+  "cached_at": 1748834018.8313842
+}

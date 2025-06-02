@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The image depicts a mobile phone screen displaying a messaging app conversation. The main subjects are text messages from Dave Mata and Palash Kala. Dave Mata is associated with \"GamesBeat and MAU (He/Him)\" and describes himself as \"Father of mobile LiveOps. Creator of Heroes Charge. Chingon\". The messages from Dave Mata include a suggestion to discuss \"your concept for playable ads\" and a link to \"https://seamania-ai.com/\" which is also previewed as \"Seaman seamania-ai.com\". Palash Kala is associated with \"MAU Vegas\" and asks to share \"your time preference of calendly. Great cgat\". The conversation appears to be a professional exchange, possibly about scheduling a meeting or discussing a business proposal. The app interface shows a \"Write a message...\" field at the bottom, with a plus sign icon and a microphone icon. The time is 13:37, and the battery is at 68%.",
+  "service_used": "gemini",
+  "processing_time": 2.4390199184417725,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 2.4384281635284424
+  },
+  "cached_at": 1748833927.925536
+}

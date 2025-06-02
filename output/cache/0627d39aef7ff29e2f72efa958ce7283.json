@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image shows a digital screen, likely a monitor or projector screen, displaying data analytics and a chat interface. The screen shows a dashboard, labeled \"Daniel's dashboard,\" with a chart visualizing revenue per geographic region for different campaigns. The chart includes data for Canada, Germany, the UK, and the US. A chat window overlayed on the dashboard asks, \"Can you show revenue per geo in each campaign?\" with the system responding, \"Of course! Here's a bar chart to help visualize the revenue per geo in each campaign.\" The data is attributed to different dates, including \"FB Spring Sale,\" \"G Search Offers,\" and \"TT Weekend Boost.\" A follow-up question asks, \"Would you like to compare cost vs revenue for any of these campaigns?\" The right side of the screen shows an interface with a \"Create New\" button and \"New Chat\" icon. The dashboard also includes metrics like \"AS LTV 12%.\" The screen is surrounded by dark curtains or a patterned wall, suggesting it's being displayed in a presentation setting.",
+  "service_used": "gemini",
+  "processing_time": 2.933894157409668,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842215.4971268
+}

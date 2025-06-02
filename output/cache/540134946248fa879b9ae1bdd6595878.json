@@ -1,0 +1,12 @@
+{
+  "success": false,
+  "description": "",
+  "service_used": "gemini",
+  "processing_time": 60.22073698043823,
+  "error": "Inline video processing failed: 504 Deadline Exceeded",
+  "metadata": {
+    "tokens_used": null,
+    "processing_time": 60.220577001571655
+  },
+  "cached_at": 1748835832.182915
+}

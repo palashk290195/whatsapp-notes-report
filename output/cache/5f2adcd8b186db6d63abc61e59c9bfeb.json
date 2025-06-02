@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image shows a presentation during a conference or seminar, indicated by the stage setup and audience. A large screen displays a slide titled \"Data & Privacy Compliance,\" featuring a diagram with a circle containing a triangle. The corners of the triangle are labeled \"Precision,\" \"Rationale,\" and \"Ambiguity.\" The room is bathed in blue and purple lighting, highlighting the screen and stage area. Part of the audience and a speaker's podium are visible. The ceiling features a patterned design with recessed lighting.",
+  "service_used": "gemini",
+  "processing_time": 2.219827890396118,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842189.3431869
+}

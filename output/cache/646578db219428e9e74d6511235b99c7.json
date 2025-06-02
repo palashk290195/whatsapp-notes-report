@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image displays a mobile phone screen capturing a message thread between \"Kevin Beatty\" and \"Palash Kala.\" The setting appears to be a messaging app, where the main activity is a conversation about GamesBeat and AI applications in gaming. Palash Kala initiated the conversation, expressing interest in connecting and discussing Hovi AI, an AI agent for playable ads. Kevin Beatty responded, apologizing for missing Palash at GamesBeat, and inquired about playable ad formats for TV versus mobile. Palash replied that they have mostly built for mobile, expressing curiosity about TV use cases. The visible text includes the names, timestamps of messages, and content of the conversation, along with the battery percentage of the phone (18%) and other status bar indicators.",
+  "service_used": "gemini",
+  "processing_time": 11.544517040252686,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748835899.116758
+}

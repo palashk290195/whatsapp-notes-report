@@ -1,0 +1,470 @@
+
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <meta charset="UTF-8">
+                        <style>
+                            body {
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+                                line-height: 1.6;
+                                color: #333;
+                                max-width: 800px;
+                                margin: 0 auto;
+                                padding: 40px 20px;
+                            }
+                            h1 {
+                                color: #2c3e50;
+                                border-bottom: 3px solid #3498db;
+                                padding-bottom: 10px;
+                                margin-bottom: 30px;
+                            }
+                            h2 {
+                                color: #34495e;
+                                margin-top: 30px;
+                                border-left: 4px solid #3498db;
+                                padding-left: 15px;
+                            }
+                            h3 { color: #2c3e50; margin-top: 20px; }
+                            p { margin-bottom: 15px; }
+                            ul { margin-bottom: 15px; }
+                            blockquote {
+                                border-left: 4px solid #bdc3c7;
+                                padding-left: 20px;
+                                margin: 20px 0;
+                                font-style: italic;
+                                background-color: #f8f9fa;
+                                padding: 15px 20px;
+                            }
+                            strong { color: #2c3e50; }
+                        </style>
+                    </head>
+                    <body>
+                        <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>&quot;Conference Report&quot;</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">"Conference Report"</h1>
+</header>
+<h1 id="mau-vegas-2025---comprehensive-conference-report">MAU Vegas 2025
+- Comprehensive Conference Report</h1>
+<h2 id="conference-overview-statistics">📊 Conference Overview &amp;
+Statistics</h2>
+<h3 id="event-details">Event Details</h3>
+<ul>
+<li><strong>Conference Name</strong>: MAU Vegas 2025</li>
+<li><strong>Total Communications</strong>: 147 messages tracked</li>
+<li><strong>Date</strong>: May 20-21, 2025</li>
+<li><strong>Location</strong>: Las Vegas (MGM venue confirmed)</li>
+</ul>
+<h3 id="key-focus-areas">Key Focus Areas</h3>
+<ol type="1">
+<li>AI Apps Monetization</li>
+<li>Playable Ads</li>
+<li>User Acquisition</li>
+<li>AI Ad Networks</li>
+<li>Landing Page Optimization</li>
+</ol>
+<h3 id="attendee-directory">Attendee Directory</h3>
+<ol type="1">
+<li>Rajat Piplewar - Primary attendee, focused on technical
+partnerships</li>
+<li>Palash - Focused on playable ads technology</li>
+<li>Divyakant - Clevertap Product Team</li>
+<li>Ashley Silva Howe</li>
+</ol>
+<h2 id="detailed-key-learnings-insights">🎓 Detailed Key Learnings &amp;
+Insights</h2>
+<h3 id="ai-apps-monetization">AI Apps Monetization</h3>
+<h4 id="context-evidence">Context &amp; Evidence</h4>
+<ul>
+<li><strong>Major Challenge Identified</strong>: Brand resistance to
+AI-generated content
+<ul>
+<li>Direct Evidence: “Met a team from Meta who are building the AI ad
+network. They have been working with DSPs to get advertisers spend but
+ran into issues with brand teams not wanting generative output.”</li>
+<li>Timestamp: 20/05/2025, 14:06</li>
+<li>Source: Rajat Piplewar’s interaction with Meta team</li>
+</ul></li>
+</ul>
+<h4 id="market-intelligence">Market Intelligence</h4>
+<ul>
+<li><strong>SensorTower Strategic Direction</strong>
+<ul>
+<li>Evidence: “Met a guy from sensortower who said they are looking into
+ai apps too.”</li>
+<li>Timestamp: 20/05/2025, 16:01</li>
+<li>Strategic Implication: Major analytics platform exploring AI app
+space indicates market validation</li>
+</ul></li>
+</ul>
+<h4 id="challenges-analysis">Challenges Analysis</h4>
+<ol type="1">
+<li>Brand Team Resistance
+<ul>
+<li>Impact: Slowing adoption of AI-generated content</li>
+<li>Market Implication: Need for hybrid approaches</li>
+<li>Opportunity: Development of brand-safe AI solutions</li>
+</ul></li>
+</ol>
+<h4 id="opportunities-assessment">Opportunities Assessment</h4>
+<ol type="1">
+<li>AI App Analytics (SensorTower)
+<ul>
+<li>Market Gap: Limited analytics for AI applications</li>
+<li>Strategic Value: Early mover advantage in analytics space</li>
+<li>Development Potential: Integration opportunities</li>
+</ul></li>
+</ol>
+<h2 id="comprehensive-networking-follow-ups">🤝 Comprehensive Networking
+&amp; Follow-ups</h2>
+<h3 id="high-priority-contacts">High-Priority Contacts</h3>
+<h4 id="divyakant-clevertap">Divyakant (Clevertap)</h4>
+<ul>
+<li><strong>Contact Details</strong>: +1 (650) 382-9797</li>
+<li><strong>Role</strong>: Product Team, Clevertap</li>
+<li><strong>Meeting Scheduled</strong>: 21/05/2025, 12:00 PM</li>
+<li><strong>Context</strong>: Product discussion</li>
+<li><strong>Follow-up Priority</strong>: High</li>
+</ul>
+<h4 id="braze-team-interaction">Braze Team Interaction</h4>
+<ul>
+<li><strong>Discussion Topic</strong>: Landing page + CRM
+integration</li>
+<li><strong>Timestamp</strong>: 20/05/2025, 20:46</li>
+<li><strong>Technical Discovery</strong>: Native drag-and-drop landing
+page builder</li>
+<li><strong>Strategic Value</strong>: Potential integration
+partnership</li>
+</ul>
+<h2 id="comprehensive-business-intelligence">💡 Comprehensive Business
+Intelligence</h2>
+<h3 id="playable-ads-market">Playable Ads Market</h3>
+<ul>
+<li><strong>Innovation Focus</strong>: AI-driven playable ad
+generation</li>
+<li><strong>Evidence</strong>: Live demo scheduled 9:00 AM to 4:00
+PM</li>
+<li><strong>Location</strong>: Lion at MGM lobby</li>
+<li><strong>Company Focus</strong>: Appier</li>
+<li><strong>Market Trend</strong>: Integration of AI in interactive ad
+formats</li>
+</ul>
+<h3 id="crm-landing-page-solutions">CRM &amp; Landing Page
+Solutions</h3>
+<ul>
+<li><strong>Key Player</strong>: Braze</li>
+<li><strong>Capability</strong>: Native drag-and-drop landing page
+creation</li>
+<li><strong>Integration Potential</strong>: CRM systems</li>
+<li><strong>Market Gap</strong>: Identified opportunity in landing page
+solutions</li>
+</ul>
+<h2 id="detailed-technical-insights-solutions">🔧 Detailed Technical
+Insights &amp; Solutions</h2>
+<h3 id="braze-platform-capabilities">Braze Platform Capabilities</h3>
+<ul>
+<li><strong>Core Feature</strong>: Native landing page builder</li>
+<li><strong>Implementation</strong>: Drag-and-drop functionality</li>
+<li><strong>Integration</strong>: CRM system connectivity</li>
+<li><strong>Technical Opportunity</strong>: Building landing page
+solution on MCP servers</li>
+</ul>
+<h2 id="complete-media-documentation">🖼️ Complete Media
+Documentation</h2>
+<h3 id="event-materials">Event Materials</h3>
+<ol type="1">
+<li><strong>Playable Ads Generation Demo Advertisement</strong>
+<ul>
+<li>Context: Live demo promotion</li>
+<li>Location: MGM lobby</li>
+<li>Time: 9:00 AM - 4:00 PM</li>
+<li>Strategic Value: Demonstrates AI capability in ad creation</li>
+</ul></li>
+<li><strong>Budget Optimization Presentation</strong>
+<ul>
+<li>Key Components: Precision, Rationale, Ambiguity</li>
+<li>Format: Visual diagram</li>
+<li>Timestamp: 21/05/2025, 09:13</li>
+<li>Business Value: Strategic approach to budget management</li>
+</ul></li>
+</ol>
+<h2 id="comprehensive-action-items-next-steps">✅ Comprehensive Action
+Items &amp; Next Steps</h2>
+<h3 id="immediate-priority">Immediate Priority</h3>
+<ol type="1">
+<li><strong>Clevertap Follow-up</strong>
+<ul>
+<li>Owner: Rajat Piplewar</li>
+<li>Deadline: 21/05/2025</li>
+<li>Action: Attend scheduled meeting</li>
+<li>Contact: Divyakant (+1 (650) 382-9797)</li>
+<li>Purpose: Product collaboration discussion</li>
+</ul></li>
+</ol>
+<h3 id="medium-term-projects">Medium-term Projects</h3>
+<ol type="1">
+<li><strong>Braze Integration Investigation</strong>
+<ul>
+<li>Owner: Rajat Piplewar</li>
+<li>Deadline: End of June 2025</li>
+<li>Scope: Landing page solution on MCP servers</li>
+<li>Context: Leverage Braze’s existing capabilities</li>
+<li>Strategic Value: Fill market gap in landing page solutions</li>
+</ul></li>
+</ol>
+<h2 id="complete-contact-directory-relationship-map">📞 Complete Contact
+Directory &amp; Relationship Map</h2>
+<h3 id="key-contacts">Key Contacts</h3>
+<ol type="1">
+<li><strong>Divyakant</strong>
+<ul>
+<li>Company: Clevertap</li>
+<li>Role: Product Team</li>
+<li>Phone: +1 (650) 382-9797</li>
+<li>Relationship: New contact</li>
+<li>Value: Product collaboration potential</li>
+</ul></li>
+<li><strong>Braze Team</strong>
+<ul>
+<li>Context: Technical discussion</li>
+<li>Focus: Landing page and CRM integration</li>
+<li>Value: Technical partnership potential</li>
+</ul></li>
+</ol>
+<h2 id="strategic-analysis-recommendations">🎯 Strategic Analysis &amp;
+Recommendations</h2>
+<h3 id="key-strategic-themes">Key Strategic Themes</h3>
+<ol type="1">
+<li><strong>AI Integration Challenges</strong>
+<ul>
+<li>Brand resistance to AI-generated content</li>
+<li>Need for brand-safe AI solutions</li>
+<li>Market education requirement</li>
+</ul></li>
+<li><strong>Platform Integration Opportunities</strong>
+<ul>
+<li>Landing page solution development</li>
+<li>CRM integration potential</li>
+<li>Technical partnership possibilities</li>
+</ul></li>
+</ol>
+<h3 id="recommendations">Recommendations</h3>
+<ol type="1">
+<li><strong>Short-term Actions</strong>
+<ul>
+<li>Execute Clevertap follow-up meeting</li>
+<li>Investigate Braze integration potential</li>
+<li>Document AI resistance patterns</li>
+</ul></li>
+<li><strong>Long-term Strategy</strong>
+<ul>
+<li>Develop brand-safe AI solutions</li>
+<li>Explore landing page market opportunity</li>
+<li>Build strategic partnerships</li>
+</ul></li>
+</ol>
+<h2 id="detailed-conference-roi-impact-assessment">📈 Detailed
+Conference ROI &amp; Impact Assessment</h2>
+<h3 id="value-generated">Value Generated</h3>
+<ol type="1">
+<li><strong>Strategic Intelligence</strong>
+<ul>
+<li>AI market challenges identified</li>
+<li>Platform capabilities discovered</li>
+<li>Integration opportunities mapped</li>
+</ul></li>
+<li><strong>Relationship Development</strong>
+<ul>
+<li>New strategic contact (Clevertap)</li>
+<li>Technical partnership potential (Braze)</li>
+<li>Market intelligence sources (SensorTower)</li>
+</ul></li>
+<li><strong>Market Opportunities</strong>
+<ul>
+<li>Landing page solution gap</li>
+<li>AI-safe content generation</li>
+<li>Analytics for AI applications</li>
+</ul></li>
+</ol>
+<h3 id="future-impact">Future Impact</h3>
+<ul>
+<li>Technical partnership potential</li>
+<li>Market positioning opportunities</li>
+<li>Product development directions</li>
+<li>Strategic partnership possibilities</li>
+</ul>
+</body>
+</html>
+
+                    </body>
+                    </html>
+                    

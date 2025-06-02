@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image depicts a conference setting, specifically focused on a panel discussion titled \"Breaking Down Accessibility Barriers: How the Industry is Redefining How We Play.\" The presentation is being held in a modern venue, indicated by the professional lighting and stylish ceiling design. \n\nIn the foreground, there is a visible audience member with long, light-colored hair, emphasizing a diverse group of attendees. A white disposable coffee cup and a small wallet can be seen on the table in front of her, suggesting a casual yet engaged atmosphere.\n\nThe main feature of the image is the large screen presenting information about the panelists and their roles. The panelists include individuals with titles such as Accessibility Lead, Content Creator, and Director of Clinical Research, indicating a focus on discussions about accessibility in gaming. Each panelist is accompanied by a headshot, and the screen background has a vibrant design with purple and blue colors, making it visually appealing.\n\nThe overall setting appears to be well-organized and conducive to networking and learning, with a backdrop of black drapes adding a touch of professionalism to the environment.",
+  "service_used": "openai_vision",
+  "processing_time": 5.161431074142456,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748835885.976414
+}

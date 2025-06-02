@@ -1,0 +1,28 @@
+# WhatsApp Chat Processing Report
+==================================================
+
+Processing Time: 203.02 seconds
+Generated: 2025-06-01 20:45:05
+
+## Message Statistics
+Total Messages: 75
+Text Messages: 66
+Media Messages: 9
+
+## Media Processing
+Successfully Processed: 7
+Failed to Process: 2
+Images: 6
+Videos: 0
+Audio: 1
+Cache Hits: 0
+
+## AI Service Usage
+Gemini Calls: 4
+Assembly AI Minutes: 0.0
+Whisper Minutes: 0.0
+Estimated Cost: $0.05 USD
+
+## Errors
+- Failed to process VID-20250510-WA0029.mp4: Video too large: 93.6MB (max: 40MB)
+- Failed to process VID-20250520-WA0020.mp4: Inline video processing failed: 504 Deadline Exceeded

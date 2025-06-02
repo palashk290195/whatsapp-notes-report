@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image shows a presentation screen displaying information about \"Insights driven video gen-AI.\" On the screen, there are two AI-generated images. The first image depicts a tank wearing a wizard's hat in a forest setting. The second image shows a small, lit house with a fence in a nighttime forest. A right-pointing arrow is placed between the two images, implying a transformation or progression. Beneath the first image is the text \"Best Performing Static,\" and beneath the second image is \"Performance based prompt to Gemini VEO 2.\" The screen has a grid pattern and is blue, and it appears to be in a presentation setting, possibly on a stage.",
+  "service_used": "gemini",
+  "processing_time": 3.8742499351501465,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842222.857774
+}

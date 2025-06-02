@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image shows a messaging interface, presumably on a mobile phone, with the sender being \"Kevin Beatty.\" The main subject is a conversation between Kevin and Palash Kala. The text from Palash Kala starts with \"Hey,\" followed by comments about mobile development and curiosity about using games on TV. He mentions \"audio games for TV (Volley Games)\" and shares a link \"https://www.volleygames.com/.\" There's a preview of the website, featuring the word \"VOLLEY\". Palash also mentions \"voice controlled AI experiences\" for TV. Below this is a video of Palash Kala, on stage, during a conference. There's a text box at the bottom for composing a message. The phone's battery is at 18%. The time is 9:16 PM",
+  "service_used": "gemini",
+  "processing_time": 2.103577136993408,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748835901.222771
+}

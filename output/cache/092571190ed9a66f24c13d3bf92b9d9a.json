@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image shows a presentation slide projected on a screen, likely at a conference or business event. The slide's title reads \"Time to Trial, By Category.\" A bar graph visually represents the percentage of trial users for various categories across different time periods: Day 0, Day 1 to 3, Day 4 to 7, Week 2, Day 15 to 30, Day 31 to 100, and Day 100 or later. The different categories include Business, Education, Gaming, Health & Fitness, Media & Entertainment, Other, Photo & Video, Productivity, Shopping, Social & Lifestyle, Travel, and Utilities. An arrow points to the Day 0 bars, emphasizing the 82% figure. The \"RevenueCat\" logo is visible at the bottom right corner of the slide. The background behind the projection screen features decorative square panels and is illuminated by blue stage lighting. Partially visible at the bottom of the image are heads of people and a section of the speaker's attire at the right.",
+  "service_used": "gemini",
+  "processing_time": 4.499171257019043,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842389.661257
+}

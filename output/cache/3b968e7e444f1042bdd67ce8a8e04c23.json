@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image shows a conference setting with a large screen displaying a slide titled \"User Journey Automation.\" The slide contains a circular diagram with three points labeled \"Precision,\" \"Rationale,\" and \"Ambiguity,\" connected by lines to form a triangle within the circle. Below the screen, a man is working with equipment on the stage. The room is lit with a purple hue. Decorative panels are visible to the right of the screen. A patterned carpet runs throughout the room, and a partial view of a seated attendee is seen in the foreground.",
+  "service_used": "gemini",
+  "processing_time": 4.050638914108276,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842168.150455
+}

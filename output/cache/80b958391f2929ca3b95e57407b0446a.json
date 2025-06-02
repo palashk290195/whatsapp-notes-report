@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image depicts a presentation slide showcasing a chart that highlights incremental growth opportunities in marketing, specifically through Return on Ad Spend (ROAS). The background features a gradient design in shades of blue and purple, enhancing the visual appeal.\n\n### Main Subjects:\n- **Chart Data**: The bar graph illustrates three categories of brands with their respective growth percentages:\n  - **All Brands**: +48%\n  - **Consumer Brands**: +116%\n  - **Shopping Brands**: +214%\n- There are indicators next to the bars that denote the growth percentages clearly, suggesting a focus on marketing effectiveness.\n\n### Setting:\n- **Presentation Environment**: The slide is set against a deep purple backdrop, likely within a conference or corporate event setting, as indicated by the stage lighting and backdrop drapery. This suggests a formal atmosphere conducive to business discussions.\n\n### Notable Features:\n- **Source Attribution**: At the bottom right, there's a source note crediting \"Singular,\" indicating the data is derived from their research or analysis.\n- **Lighting and Stage Design**: The lighting enhances the visibility of the slide while providing a professional aesthetic. Elements like the draped curtain and stage equipment on the side contribute to the event's atmosphere.\n\nOverall, the image presents crucial data aimed at professionals looking to understand advertising effectiveness and explore opportunities for growth in their marketing strategies.",
+  "service_used": "openai_vision",
+  "processing_time": 8.050923824310303,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842383.0121322
+}

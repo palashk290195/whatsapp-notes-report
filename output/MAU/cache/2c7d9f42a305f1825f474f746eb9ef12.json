@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The image is taken in a large room, possibly a conference hall, illuminated by blue and purple lighting. The primary focus is a large projection screen displaying a slide titled \"Asset A/B Testing.\" The slide features a diagram with three axes labeled \"Ambiguity,\" \"Precision,\" and \"Rationale,\" forming a triangular representation.\n\nIn the foreground, a person is seated, partially visible on the left side of the frame. They appear to be holding a cup or mug and are looking down. A stage is visible in the foreground, featuring a black drape. The patterned carpet in the aisle. Background elements include curtains, decorative wall panels, and the ceiling with recessed lighting.",
+  "service_used": "gemini",
+  "processing_time": 4.915909051895142,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 4.9152069091796875
+  },
+  "cached_at": 1748833578.351327
+}

@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image displays a notification message, likely from an app store or web browser, concerning the app \"Mistplay\". The notification reads \"Looking for MISTPLAY: Play to Earn Money?\". It includes the Mistplay logo, which contains a gamepad controller, a dollar sign, and a gem-like shape. Below this, the message \"This app isn't available on Google Play in your region\" is displayed, indicating that the app is not accessible for download or use in the user's geographical area through the Google Play Store. The notification is presented within a rounded-corner, light-gray box.",
+  "service_used": "gemini",
+  "processing_time": 1.9739530086517334,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842445.771436
+}

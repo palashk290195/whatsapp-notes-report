@@ -1,0 +1,30 @@
+# Core Python Libraries
+python-dotenv>=1.0.0
+pathlib2>=2.3.7
+typing-extensions>=4.8.0
+
+# OpenAI API (only AI service needed)
+openai>=1.6.1
+
+# HTTP and Utilities
+requests>=2.31.0
+urllib3>=2.1.0
+
+# Logging and Configuration
+colorama>=0.4.6
+
+# PDF Generation
+markdown-pdf>=1.7
+
+# Web Framework
+flask>=3.0.0
+flask-cors>=4.0.0
+flask-socketio>=5.3.0
+python-socketio>=5.10.0
+gunicorn>=21.2.0
+
+# Development and Testing (optional)
+pytest>=7.4.3
+pytest-mock>=3.12.0
+black>=23.11.0
+flake8>=6.1.0 

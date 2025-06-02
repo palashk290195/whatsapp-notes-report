@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "Here's a description of the image:\n\n**Main Subject:** The primary focus is a slide presentation showing a stacked bar graph titled \"Monetization Mix, By Category\". The graph represents the percentage breakdown of different monetization models (Subscriptions Only, Subscriptions + Consumables, Subscriptions + Lifetime, Subscriptions, Consumables, and Lifetime) across various categories (Business, Education, Gaming, Health & Fitness, Media & Entertainment, Photo & Video, Productivity, Shopping & Lifestyle, Social & Travel, Utilities, and Overall).\n\n**Objects:**\n*   A large projection screen displaying the slide.\n*   A stacked bar graph with labeled axes and color-coded segments representing different monetization models.\n*   A decorative wall with repeating geometric patterns is visible behind the screen.\n\n**Activities:**\n*   The image is likely captured during a presentation or conference where the slide is being shown to an audience.\n\n**Setting:**\n*   The setting appears to be a conference hall or auditorium, judging by the decorative wall and the presence of a projection screen.\n\n**Text Visible:**\n*   \"Monetization Mix, By Category\"\n*   \"100%\", \"80%\", \"60%\", \"40%\", \"20%\", \"0%\" (Y-axis labels)\n*   \"Business\", \"Education\", \"Gaming\", \"Health & Fitness\", \"Media & Entertainment\", \"Photo & Video\", \"Productivity\", \"Shopping & Lifestyle\", \"Social & Travel\", \"Utilities\", \"Overall\" (X-axis labels)\n*   \"Subscriptions Only\", \"Subscriptions + Consumables\", \"Subscriptions + Lifetime\", \"Subscriptions, Consumables, and Lifetime\" (Legend)\n*   Percentage values on each segment of the bars.\n*   \"35%\" (at the top near overall subscription)\n*   \"RevenueCat\" (Company logo at the bottom right)",
+  "service_used": "gemini",
+  "processing_time": 4.505040884017944,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842398.481364
+}

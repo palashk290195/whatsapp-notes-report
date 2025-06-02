@@ -1,0 +1,192 @@
+{
+  "conference_overview": {
+    "name": "MAU Vegas 2025",
+    "total_messages": 147,
+    "key_topics": [
+      "AI Apps Monetization",
+      "Playable Ads",
+      "User Acquisition",
+      "AI Ad Networks",
+      "Landing Page Optimization"
+    ],
+    "attendees": [
+      "Rajat Piplewar",
+      "Palash",
+      "Divyakant",
+      "Ashley Silva Howe"
+    ]
+  },
+  "sections": [
+    {
+      "id": "learnings_001",
+      "title": "AI Apps Monetization",
+      "type": "learnings",
+      "priority": 1,
+      "description": "Insights on the growth and challenges of AI applications in the market.",
+      "content": {
+        "key_points": [
+          {
+            "point": "AI apps face challenges in sustaining growth due to rapid obsolescence.",
+            "evidence": "Voice note discussing the risk of AI apps becoming obsolete quickly.",
+            "timestamp": "20/05/2025, 17:29",
+            "people": [
+              "Rajat Piplewar"
+            ],
+            "companies": [
+              "OpenAI"
+            ]
+          }
+        ],
+        "subcategories": {
+          "challenges": [
+            "Obsolescence",
+            "Market saturation"
+          ]
+        }
+      }
+    },
+    {
+      "id": "followups_001",
+      "title": "Networking and Follow-ups",
+      "type": "followups",
+      "priority": 2,
+      "description": "Key contacts and meetings planned for potential collaborations.",
+      "content": {
+        "key_points": [
+          {
+            "point": "Meeting with Divyakant from Clevertap scheduled.",
+            "evidence": "12PM meeting tomorrow with Divyakant.",
+            "timestamp": "20/05/2025, 18:07",
+            "people": [
+              "Rajat Piplewar",
+              "Divyakant"
+            ],
+            "companies": [
+              "Clevertap"
+            ]
+          }
+        ],
+        "subcategories": {
+          "contacts": [
+            "Divyakant"
+          ],
+          "meetings": [
+            "Clevertap product discussion"
+          ]
+        }
+      }
+    },
+    {
+      "id": "insights_001",
+      "title": "AI Ad Networks",
+      "type": "insights",
+      "priority": 3,
+      "description": "Exploration of AI-driven ad networks and their market implications.",
+      "content": {
+        "key_points": [
+          {
+            "point": "Meta's AI ad network faces resistance from brand teams.",
+            "evidence": "Issues with brand teams not wanting generative output.",
+            "timestamp": "20/05/2025, 14:06",
+            "people": [
+              "Rajat Piplewar"
+            ],
+            "companies": [
+              "Meta"
+            ]
+          }
+        ],
+        "subcategories": {
+          "challenges": [
+            "Brand resistance"
+          ]
+        }
+      }
+    },
+    {
+      "id": "technical_001",
+      "title": "Landing Page Optimization",
+      "type": "insights",
+      "priority": 4,
+      "description": "Technical discussions on optimizing landing pages using CRM tools.",
+      "content": {
+        "key_points": [
+          {
+            "point": "Braze supports native landing page creation but sees a gap in customer needs.",
+            "evidence": "Braze team discussed landing page + CRM integration.",
+            "timestamp": "20/05/2025, 20:46",
+            "people": [
+              "Rajat Piplewar"
+            ],
+            "companies": [
+              "Braze"
+            ]
+          }
+        ],
+        "subcategories": {
+          "tools": [
+            "Braze CRM"
+          ]
+        }
+      }
+    },
+    {
+      "id": "media_001",
+      "title": "Playable Ads Demo",
+      "type": "media",
+      "priority": 5,
+      "description": "Media highlighting the demo of AI-powered playable ads.",
+      "content": {
+        "key_points": [
+          {
+            "point": "AI-powered process for creating interactive playable ads.",
+            "evidence": "Image description of a demo event for playable ads.",
+            "timestamp": "20/05/2025, 22:05",
+            "people": [
+              "Palash"
+            ],
+            "companies": [
+              "Appier"
+            ]
+          }
+        ],
+        "subcategories": {
+          "features": [
+            "Interactive scenes",
+            "Quick generation"
+          ]
+        }
+      }
+    }
+  ],
+  "media_references": [
+    {
+      "description": "Image of a conference slide on 'Bid & Budget Optimization'.",
+      "context": "Presentation setting with a focus on optimization strategies.",
+      "timestamp": "21/05/2025, 09:13",
+      "relevance": "Highlights key strategies in budget optimization."
+    },
+    {
+      "description": "Image of a presentation on 'AI-powered fraud detection'.",
+      "context": "Slide showing the benefits of AI in fraud detection.",
+      "timestamp": "21/05/2025, 09:25",
+      "relevance": "Demonstrates the effectiveness of AI in security."
+    }
+  ],
+  "action_items": [
+    {
+      "task": "Follow up with Divyakant from Clevertap.",
+      "person": "Rajat Piplewar",
+      "priority": "high",
+      "deadline": "21/05/2025",
+      "context": "Discuss potential white labeling opportunities."
+    },
+    {
+      "task": "Explore AI ad network challenges with Meta.",
+      "person": "Rajat Piplewar",
+      "priority": "medium",
+      "deadline": "End of conference",
+      "context": "Understand brand resistance to generative outputs."
+    }
+  ]
+}

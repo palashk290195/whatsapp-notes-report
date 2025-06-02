@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image features a presentation slide displayed on a large screen, likely in a conference or seminar setting. The slide is titled \"Ad Opportunities\" and shows a line graph with three distinct lines, each representing different categories of advertising opportunities: Finance, Social Media, and Sports.\n\n- **Graph Details**: \n  - The graph plots \"Time of Day\" on the horizontal axis, ranging from 12 AM to 8 PM.\n  - The Finance data is indicated by a blue line, the Social Media by a pink line, and the Sports by a green line.\n  - Each line has fluctuations that suggest varying levels of advertising opportunities at different times throughout the day.\n\n- **Background and Environment**: \n  - The setting is dimly lit, with the screen providing a significant light source, enhancing visibility of the content.\n  - The background features intricate designs on the right, possibly indicating the conference's branding or theme.\n  - A portion of the audience or setting is dark, suggesting an indoor venue focused on the presentation.\n\nOverall, the image captures a professional environment aimed at discussing advertising strategies, with visual data provided to facilitate understanding and analysis.",
+  "service_used": "openai_vision",
+  "processing_time": 5.087323188781738,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748846303.401776
+}

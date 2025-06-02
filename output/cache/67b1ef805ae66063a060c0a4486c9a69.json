@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image appears to be a digital schedule or program for a conference session titled \"Rewarded 2.0: The Playbook for Turning Play-And-Earn Into Your LTV Engine.\" This session is scheduled to take place from 1:10 PM to 1:50 PM.\n\n**Main Subjects:**\n- The session features several presenters: Elizabeth Cattell from Atlas Reality, Tricia Han from Mistplay, Josephine Chow from Shopback, and Peggy Anne Salz from Forbes.com.\n- Mistplay is highlighted as the session sponsor.\n\n**Setting:**\n- The venue for the session is noted as \"Terrace Ballroom 153,\" indicating a specific location within a larger event or conference setting.\n\n**Notable Features:**\n- The time is displayed prominently on the left side, providing clear information about the session's duration.\n- The title of the presentation emphasizes the themes of play and earning, likely relevant to the gaming or app industry.\n- The use of a green and white color scheme may suggest branding elements associated with the sponsoring company, Mistplay.\n\nOverall, the image conveys key information about the presentation, its speakers, and logistical details relevant to attendees.",
+  "service_used": "openai_vision",
+  "processing_time": 4.690603017807007,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842443.796996
+}

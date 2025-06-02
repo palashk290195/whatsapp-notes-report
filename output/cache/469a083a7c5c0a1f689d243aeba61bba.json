@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "description": "The video shows a group of people seated around small tables in a conference-like setting. Most of the people are wearing lanyards, suggesting they're part of an event. The camera moves through the space, focusing on different individuals. The backdrop is a simple, modern white wall with some architectural details. The atmosphere is casual and conversational.",
+  "service_used": "gemini",
+  "processing_time": 3.57790207862854,
+  "error": null,
+  "metadata": {
+    "tokens_used": 0,
+    "processing_time": 3.5776350498199463
+  },
+  "cached_at": 1748842776.1488042
+}

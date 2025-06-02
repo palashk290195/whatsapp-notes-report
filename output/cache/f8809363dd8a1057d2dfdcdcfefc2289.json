@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image appears to be a schedule or agenda for an event, likely a conference or seminar. It highlights a session titled \"Maximizing iOS Potential: Understanding SKAN / AAK for User Acquisition and Re-engagement.\" \n\n### Key Details:\n- **Time:** The session is scheduled for 09:30 AM to 10:00 AM.\n- **Speakers:** The session features four speakers:\n  - Justin Warshavsky from DraftKings\n  - Sandy Shen from LinkedIn\n  - Zach Gryphon from Wavemaker\n  - Mark Menery from Dataseat\n- **Location:** The event will take place in \"Boulevard Ballroom 159-163.\"\n- **Event Title:** The session is part of \"MAU Vegas,\" which is sponsored by the MAU Vegas Show Team.\n\n### Design Elements:\n- The layout is straightforward, with text arranged in an easy-to-read manner.\n- Key elements are highlighted using different fonts or colors to emphasize the titles, names, and details.\n\nOverall, this image serves as a functional overview of a specific event within a larger conference focused on user acquisition strategies for iOS applications.",
+  "service_used": "openai_vision",
+  "processing_time": 4.879849195480347,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748842332.8721101
+}

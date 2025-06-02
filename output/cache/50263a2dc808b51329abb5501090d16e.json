@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "description": "The image depicts a presentation slide projected in a conference or event setting, likely focused on marketing or business growth. The slide contains a bar graph illustrating different percentages that represent incremental growth in various categories.\n\n### Main Elements:\n- **Title:** The title reads, \"Where can you find incremental growth?\" positioned prominently at the top of the slide.\n- **Bar Graph:**\n  - The graph consists of three bars, each representing different metrics related to the 30-day return on ad spend (ROAS) for various types of brands:\n    - The first bar shows a growth of **+48%** for \"All Brands.\"\n    - The second bar indicates **+116%** for \"Consumer Brands.\"\n    - The third and tallest bar highlights a significant growth of **+214%** for \"Shopping Brands.\"\n  - Each bar is labeled clearly, and there are light blue shaded areas within the bars that enhance visual clarity.\n\n### Notable Features:\n- **Color Scheme:** The overall color scheme is a gradient of blues with white text, creating a modern and professional aesthetic. The contrasting colors help in making the information easy to read.\n- **Source Citation:** At the bottom of the slide, it says \u201cSource: Singular,\u201d providing attribution for the data presented.\n- **Background:** The background features elegant drapery, likely in a dark color, that enhances focus on the slide. There are also rows of intricate design elements or panels located on the right side of the image, possibly",
+  "service_used": "openai_vision",
+  "processing_time": 9.718475103378296,
+  "error": null,
+  "metadata": null,
+  "cached_at": 1748846298.1563652
+}
