@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image is a presentation slide displayed on a large screen, likely during a conference or meeting. The background is a gradient of blue with a grid pattern that enhances the visual organization. \n\nThe main subject is a diamond-shaped diagram that appears to be three-dimensional. The points of the diamond are labeled with the following categories:\n\n1. **Business Intelligence** (top point)\n2. **Market & Customer Research** (right point)\n3. **Product Design & Development** (bottom point)\n4. **Brand & Creative Leadership** (left point)\n5. **AI Adoption Leadership** (center point)\n\nThese labels are strategically placed around the chart, indicating distinct areas of focus within a particular framework, possibly related to business or technology.\n\nThe setting includes elements of stage lighting, with dark curtains or draping that suggest a professional atmosphere. There's a display of sophistication, indicating a formal or corporate event where these topics are relevant. Overall, the slide presents a clear, engaging visual meant to convey important information regarding leadership and strategy in business contexts.",
-  "service_used": "openai_vision",
-  "processing_time": 6.245762825012207,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748845952.645325
-}

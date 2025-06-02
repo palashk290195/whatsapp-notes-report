@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image depicts a bar graph titled \"Trial to Paid, By Trial Duration.\" The graph presents various percentages related to user conversions from trial to paid subscriptions over different trial durations.\n\n### Main Subjects:\n- **Graph Elements:** The graph has multiple bars, each representing a range of trial durations: \"<= 4 Days,\" \"5-9 Days,\" \"10-16 Days,\" and \"17-32 Days.\" Each bar includes a range with a rectangular box suggesting upper and lower data points.\n- **Percentages:** The specific values indicate the percentage of users who converted from trial to paid subscriptions, with the highest conversions seen in the \"17-32 Days\" category.\n\n### Setting:\n- The background is neutral and the graph is centrally placed, indicating it may be part of a presentation, likely in a conference or seminar setting.\n\n### Notable Features:\n- **Color Coding:** The bars use red fill, and different heights indicate varying conversion rates.\n- **Numerical Data:** Each trial duration category is accompanied by distinct numerical values that provide insights into user behavior.\n- **Branding:** The graph features the logo and name \"RevenueCat\" at the bottom right, suggesting the data may be related to app revenue management or subscription services.\n\nThe overall composition emphasizes the critical analysis of trial durations and their impact on user conversions, providing insightful data for decision-makers in business and marketing sectors.",
-  "service_used": "openai_vision",
-  "processing_time": 5.853352308273315,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748846315.627329
-}

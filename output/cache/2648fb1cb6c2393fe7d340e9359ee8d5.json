@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image presents a visual diagram likely related to a technology or marketing concept, focusing on an \"Attribution Engine.\" The background is dark, hinting at a professional setting, possibly a conference or presentation.\n\n### Main Subjects:\n1. **Attribution Engine**: Central to the diagram, representing the core functionality discussed.\n2. **Technology Components**: \n   - **Android and iOS Frameworks**: Key platforms mentioned, with various tools like \"AdServices framework,\" \"IDFA,\" and \"SKAN\" indicating mobile marketing techniques.\n   - **AI Elements**: Features labeled with \"AI powered\" suggest advanced analytics and automation, including fraud detection and model attribution.\n   \n### Setting:\n- The image is structured with clear sections and labeled nodes, suggesting a methodical approach to describing the flow and interactions between different components. The use of colors\u2014blue for AI-related features, yellow for significant frameworks, and grey for general categories\u2014creates a visually engaging layout.\n\n### Notable Features:\n- **Flowchart Style**: The layout shows relationships and processes, indicating how different elements feed into the attribution engine.\n- **Terminology**: Specific terms like \"Fraud proactive insights,\" \"Modelling Attribution,\" and \"Sandbox\" highlight a focus on analytics, security, and testing environments.\n- **Single Source of Truth**: This phrase at the bottom underscores the goal of creating a consistent and reliable data framework, suggesting a comprehensive approach to data integrity.\n\nThis diagram-style presentation likely aims",
-  "service_used": "openai_vision",
-  "processing_time": 6.77228307723999,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842203.051722
-}

@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image shows a presentation screen displaying a timeline of technology eras. From bottom to top, the eras listed are: (2007-2011) \"The Dawn of Mobile Browsing,\" (2012-2016) \"The App Explosion & Platform Consolidation,\" (2016-2020) \"The Personalization Era,\" (2021-2024) \"The Privacy Reckoning,\" and (2024-2025) \"The Fragmentation Era.\" The timeline is represented by a curved white line with white dots indicating each era. The background is blue with square graphics. The setting appears to be a presentation or conference room, with a glimpse of audience members at the bottom. A curtain and decorative panel are visible on the right side.",
-  "service_used": "gemini",
-  "processing_time": 40.12886095046997,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842374.735771
-}

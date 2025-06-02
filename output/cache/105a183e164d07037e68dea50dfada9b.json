@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image captures a presentation screen displaying a graph titled \"Ad Opportunities.\" The graph plots data across the \"Time of Day,\" ranging from 12am to 8pm, and compares trends for \"Finance,\" \"Social Media,\" and \"Sports.\" Finance is represented by a blue line, social media by a pink line, and sports by a slightly lighter blue line.\n\nThe setting appears to be a conference or presentation hall, as evidenced by the textured wall with decorative panels to the right and a podium partially visible at the bottom right. The overall lighting is predominantly blue. The text \"MA\" is barely visible on the podium.",
-  "service_used": "gemini",
-  "processing_time": 2.146898031234741,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842385.1610172
-}

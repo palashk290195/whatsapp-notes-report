@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image displays a presentation slide focused on \"AI-powered fraud detection.\" The main subject is a graph illustrating two lines representing detection performance over time: one line (blue) indicates performance with AI, while the other (pink) shows performance without AI. The slide indicates several key statistics: \n\n- \"8X faster recovery time\" and \"7X higher detection accuracy\" are highlighted next to each corresponding line, emphasizing the benefits of using AI technology.\n- Additionally, \"14X longer deterrence\" is mentioned, suggesting a significant improvement in sustained fraud detection effectiveness when employing AI.\n\nThe backdrop of the slide has a modern, digital design with a grid pattern, likely to reflect a tech-centric theme. To the right of the graph, light decorative elements can be seen, possibly indicating a formal presentation setting. Overall, the slide aims to convey the advantages of AI in fraud detection clearly and visually.",
-  "service_used": "openai_vision",
-  "processing_time": 8.254533052444458,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748845965.12164
-}

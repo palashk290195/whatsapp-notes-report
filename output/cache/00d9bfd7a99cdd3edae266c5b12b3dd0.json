@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image depicts a presentation slide with a statistical graph related to \"Time to Trial, By Category.\" The slide is prominently displaying a bar chart with various colored bars representing different categories such as Business, Education, Gaming, Health & Fitness, and more. The chart indicates the percentage of users reaching a trial for each category over a timeline marked by labels like \"Day 0,\" \"Day 1 to 3,\" \"Day 4 to 7,\" \"Week 2,\" and more. \n\nA notable feature of the chart is the strong peak at 82%, likely highlighting a particular category or time frame of significant engagement. The colors of the bars distinguish the various categories clearly, allowing viewers to compare them visually. \n\nIn the background, there are curtains and a decorative wall that contribute to a professional and formal event ambiance, indicating that this presentation is likely taking place in a conference setting. There are some shadows of attendees seated in the foreground, suggesting an audience is present for the presentation. The logo \"RevenueCat\" is noted at the bottom right of the slide, indicating the organization behind the data being presented.",
-  "service_used": "openai_vision",
-  "processing_time": 6.04104208946228,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748846309.623788
-}

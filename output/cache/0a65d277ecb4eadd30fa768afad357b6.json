@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image is a screenshot of a messaging app interface, likely on a mobile phone. The time is 13:37, and the battery is at 68%. The screen shows a conversation with \"Dave Mata\" and a separate conversation with \"Palash Kala.\"\n\nThe main subject is the message history within the app. Dave Mata is listed as associated with \"GamesBeat and MAU (He/Him)\" and is identified as \"Father of mobile LiveOps. Creator of Heroes Charge. Chingon.\" Recent messages from Dave Mata include a request to discuss \"playable ads\" and a link to the website \"https://seamania-ai.com/,\" which is displayed with a preview titled \"Seaman.\"\n\nPalash Kala is associated with \"MAU Vegas.\" The most recent message from Palash Kala asks for time preferences for Calendly and includes \"Great cgat Chat\" at the end.\n\nAt the bottom of the screen, there is a text input field labeled \"Write a message...\" along with a plus sign on the left for attaching a file or starting a new conversation. Below that are navigation buttons which are commonly found in android devices.",
-  "service_used": "gemini",
-  "processing_time": 2.8734588623046875,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842628.7819781
-}

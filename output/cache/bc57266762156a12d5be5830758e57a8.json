@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image shows a presentation on \"Customer Segmentation\" taking place in a large hall. A large screen displays a diagram, which is a circle divided into three segments labeled \"Precision,\" \"Rationale,\" and \"Ambiguity,\" connected by lines in the center. In front of the screen, a man stands near the center of the stage, seemingly observing the presentation. Seated in the foreground on the left is a woman holding a cup. The hall is illuminated with blue and purple lighting. The floor is covered with a patterned carpet. There are curtains in the background and some lights on the stage.",
-  "service_used": "gemini",
-  "processing_time": 2.0493240356445312,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842164.098461
-}

@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image is a screenshot of a mobile device display, likely an event invitation or schedule related to a conference or meeting. The top of the screen shows the time \"22:04,\" the date \"31,\" and a battery indicator showing 29% charge.\n\nThe first section of the event description encourages attendees to visit the MGM lobby, specifically to see the Lion and the Las Vegas sign, take pictures, and return. A button labeled \"RSVP NOW\" is visible, suggesting attendees confirm their participation.\n\nThe second section details a \"Playable Ads Generation 1:1 Live Demo\" scheduled from 9:00 AM to 4:00 PM, with the user's local time being 6:00 - 13:00. The description highlights the AI-powered process that uses game video to create interactive and performance-ready playable ads. Key features include the ability to choose vertical or horizontal formats, plug in gameplay footage without design needs, generate interactive scenes quickly, and create launch-ready creatives in under 10 minutes. A button labeled \"BOOK YOUR DEMO\" is provided.\n\nBelow, it's noted that the event is \"Sponsored by: Appier.\"\n\nA final section indicates a session from 12:00 PM to 1:00 PM in Meeting Room 256, and it includes a prompt to \"Ask a question about MAU.\"\n\nIn the lower part of the screen, there is a floating button with a cookie icon, and a chat bubble icon. The navigation bar for the mobile device is also visible.",
-  "service_used": "gemini",
-  "processing_time": 3.7750232219696045,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842149.858192
-}

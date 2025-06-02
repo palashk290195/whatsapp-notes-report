@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image presents a slide from a presentation titled \"Monetization Mix, By Category.\" The slide features a bar graph illustrating different categories and their respective revenue percentages. \n\nKey details include:\n\n- **Main Subjects:** The graph shows categories such as Business, Education, Gaming, Health & Fitness, Media & Entertainment, Photo & Video, Productivity, Social & Lifestyle, Travel, and Utilities. Each category has a stacked bar segmented into three colors representing different monetization methods: subscriptions only, subscriptions + consumables, and subscriptions + lifetime.\n\n- **Notable Features:** \n  - The bar graph vividly contrasts the revenue contributions from each category, with varying heights indicating the percentage breakdown.\n  - A specific focus is given to the 'Overall' category, which clarifies that 35% of revenue is from 'subscriptions only.'\n  - The overall branding is linked to RevenueCat, signified by a logo at the bottom right.\n\n- **Setting:** The graph is displayed on a large screen, suggesting a formal presentation environment, possibly a conference or workshop. The backdrop features decorative elements, hinting at a professional setting.\n\nOverall, the image effectively communicates a data-driven insight into app monetization strategies across various sectors.",
-  "service_used": "openai_vision",
-  "processing_time": 12.109750032424927,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748846327.9121149
-}

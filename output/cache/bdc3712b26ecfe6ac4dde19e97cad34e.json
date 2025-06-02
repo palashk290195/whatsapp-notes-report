@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image shows a presentation setting, likely at a conference or seminar. The main focus is a large screen displaying a slide titled \"Bid & Budget Optimization.\" The slide features a circular graphic with three vectors labeled \"Precision,\" \"Rationale,\" and \"Ambiguity,\" forming a triangular shape in the center of the circle. The screen has a grid pattern behind the circle, which has lighter and darker blue portions. To the left of the screen, there is a woman sitting and looking at her phone. In front of the screen, there are speakers and a portion of the stage visible, which is carpeted with a swirled design in shades of blue and white. The lighting in the room is primarily purple and blue. The ceiling and walls are visible in the background, along with white curtains.",
-  "service_used": "gemini",
-  "processing_time": 2.4689290523529053,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842152.32799
-}

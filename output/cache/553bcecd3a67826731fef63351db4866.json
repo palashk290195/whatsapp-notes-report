@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image shows a slide with a graph titled \"Trial to Paid, By Trial Duration\". The X-axis represents the duration of the trial in days, broken into categories: \"<= 4\", \"5-9 Days\", \"10-16 Days\", and \"17-32 Days\". The Y-axis shows the percentage, ranging from 0% to 80%.\n\nFor each trial duration category, there is a vertical line with a red box in the middle. The values at the top, middle, and bottom of each red box represent the maximum, average, and minimum conversion rates from trial to paid for that duration, respectively.\n\nThe \"17-32 Days\" category is highlighted with a dark outline. The data points for this category are: a maximum of 73.4%, an average of 61.1%, a minimum of 45.7%, and a lower point of 29.8%. The other categories also have corresponding data points.\n\nIn the bottom right corner, there is a logo or name \"Revenue Cat\". To the right of the slide, there is a glimpse of some sort of patterned blue and silver colored wall or decor.",
-  "service_used": "gemini",
-  "processing_time": 4.313632011413574,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842393.97577
-}

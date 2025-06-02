@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image is a presentation slide titled \"Creative AI engine.\" It shows a mobile phone screen displaying the game \"Combat Unit\" and is connected with metrics on the left, such as \"Cost & revenue,\" \"Impressions, clicks & installs,\" \"In-app events, retention & cohort data,\" \"Creative Assets,\" and \"Creative Metadata.\" The app has metrics like \"Title: 6.5,\" \"Gear: $86K,\" and \"Button: $2.3.\" An arrow points from the phone to a list of potential outputs on the right, including \"Creative Insights,\" \"Creative Scripts,\" \"Creative Scoring,\" \"Performance Based Gen AI Concepts,\" and \"Performance Based Prompts.\" The overall layout suggests a system where data from an app is used by an AI engine to generate creative content and insights.",
-  "service_used": "gemini",
-  "processing_time": 3.4838058948516846,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842218.9822452
-}

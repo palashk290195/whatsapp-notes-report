@@ -1,9 +1,0 @@
-{
-  "success": true,
-  "description": "The image shows a computer screen displaying the \"Adjust Growth Copilot\" interface for \"Creative Analysis\". On the left is a menu with options such as \"Data Configuration,\" \"Ad Name,\" and various video playables and rewarded content. The right side of the screen presents \"Creative Performance Analysis\" with \"Actionable Recommendations.\" These include scaling high-efficiency playables, piloting untrusted devices, optimizing rewarded campaigns, and revisiting the CTV strategy. A chat box prompts the user to drill down by ad format or assess geo-level performance, and there's a field to type a message. The Adjust logo is visible on the top right, and a textured panel is seen on the far right edge of the image.",
-  "service_used": "gemini",
-  "processing_time": 37.754703998565674,
-  "error": null,
-  "metadata": null,
-  "cached_at": 1748842438.974208
-}
