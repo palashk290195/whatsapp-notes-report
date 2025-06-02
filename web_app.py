@@ -417,12 +417,28 @@ class ChatProcessorWebApp:
             session['progress'] = 10
             self.web_logger.emit_progress("ZIP file extracted successfully", 10, "success")
             
-            # Find chat folder (usually the main folder in the zip)
-            chat_folders = [d for d in extract_dir.iterdir() if d.is_dir()]
+            # Find chat folder (ignore macOS metadata and prioritize actual chat folders)
+            chat_folders = [d for d in extract_dir.iterdir() if d.is_dir() and not d.name.startswith('__MACOSX')]
+            
             if not chat_folders:
+                # No subdirectories, use the extracted directory itself
                 chat_folder = extract_dir
-            else:
+            elif len(chat_folders) == 1:
+                # Only one valid folder, use it
                 chat_folder = chat_folders[0]
+            else:
+                # Multiple folders - find the one with WhatsApp chat files
+                chat_folder = None
+                for folder in chat_folders:
+                    # Look for WhatsApp chat files
+                    txt_files = list(folder.glob("*.txt"))
+                    if any("WhatsApp Chat" in f.name for f in txt_files):
+                        chat_folder = folder
+                        break
+                
+                # If no WhatsApp chat found, use the first valid folder
+                if not chat_folder:
+                    chat_folder = chat_folders[0]
             
             session['progress'] = 15
             self.web_logger.emit_progress("Chat folder identified", 15, "success")
@@ -495,10 +511,18 @@ class ChatProcessorWebApp:
             # Find enhanced chat file
             enhanced_files = list(enhanced_output.glob("*_enhanced_*.txt"))
             if not enhanced_files:
+                # Try alternative naming patterns
+                enhanced_files = list(enhanced_output.glob("enhanced_chat_*.txt"))
+                if not enhanced_files:
+                    enhanced_files = list(enhanced_output.glob("*.txt"))
+            
+            if not enhanced_files:
                 raise Exception("No enhanced chat file generated")
             
             enhanced_chat_path = enhanced_files[0]
             session['enhanced_path'] = str(enhanced_chat_path)
+            
+            self.web_logger.emit_progress(f"Found enhanced chat file: {enhanced_chat_path}", session.get('progress', 75), "success")
             
             session['status'] = 'generating_report'
             session['progress'] = 80

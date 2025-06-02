@@ -47,9 +47,14 @@ class WhatsAppChatParser:
         self.logger = logging.getLogger(__name__)
         
         # WhatsApp message patterns
-        # Format: DD/MM/YYYY, HH:MM - Sender Name: Message content
+        # Standard format: DD/MM/YYYY, HH:MM - Sender Name: Message content
         self.message_pattern = re.compile(
             r'^(\d{1,2}/\d{1,2}/\d{4}),?\s+(\d{1,2}:\d{2})\s*-\s*([^:]+?):\s*(.*)$'
+        )
+        
+        # Alternative format: [YYYY-MM-DD HH:MM:SS] Sender Name: Message content
+        self.alt_message_pattern = re.compile(
+            r'^\[(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2})\]\s*([^:]+?):\s*(.*)$'
         )
         
         # Media file patterns
@@ -99,12 +104,12 @@ class WhatsAppChatParser:
                     if not line:
                         continue
                     
-                    # Basic parsing for now
+                    # Try standard WhatsApp format first
                     match = self.message_pattern.match(line)
                     if match:
                         date_str, time_str, sender, content = match.groups()
                         
-                        # Parse timestamp
+                        # Parse timestamp (DD/MM/YYYY format)
                         try:
                             timestamp = datetime.strptime(f"{date_str} {time_str}", "%d/%m/%Y %H:%M")
                         except ValueError:
@@ -129,6 +134,46 @@ class WhatsAppChatParser:
                             raw_line=line,
                             line_number=line_number
                         ))
+                    else:
+                        # Try alternative format [YYYY-MM-DD HH:MM:SS] Sender: Message
+                        alt_match = self.alt_message_pattern.match(line)
+                        if alt_match:
+                            date_str, time_str, sender, content = alt_match.groups()
+                            
+                            # Parse timestamp (YYYY-MM-DD HH:MM:SS format)
+                            try:
+                                timestamp = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M:%S")
+                            except ValueError:
+                                timestamp = datetime.now()
+                            
+                            # Check for media files and special content
+                            media_filename = None
+                            message_type = MessageType.TEXT
+                            
+                            # Handle different content types from the enhanced format
+                            if content.startswith('This is an image:'):
+                                message_type = MessageType.MEDIA
+                                # Keep the AI description as content
+                            elif content.startswith('Voice note:'):
+                                message_type = MessageType.MEDIA
+                                # Keep the transcription as content  
+                            elif content == '[Video file - processing skipped]':
+                                message_type = MessageType.MEDIA
+                            elif '(file attached)' in content:
+                                media_match = re.search(r'(.+?)\s*\(file attached\)', content)
+                                if media_match:
+                                    media_filename = media_match.group(1).strip()
+                                    message_type = MessageType.MEDIA
+                            
+                            messages.append(ParsedMessage(
+                                timestamp=timestamp,
+                                sender=sender.strip(),
+                                content=content.strip(),
+                                message_type=message_type,
+                                media_filename=media_filename,
+                                raw_line=line,
+                                line_number=line_number
+                            ))
         
         except Exception as e:
             self.logger.error(f"Error parsing chat file {file_path}: {e}")
